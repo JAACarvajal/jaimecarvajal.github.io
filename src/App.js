@@ -14,6 +14,8 @@ function App() {
       <Container>
         <Sample />
         <Sample />
+        <Sample />
+        <Sample />
       </Container>
     </div>
       

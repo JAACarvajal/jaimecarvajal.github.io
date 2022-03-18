@@ -8,10 +8,10 @@ function About() {
     <div className="about flex flex-col p-10">
         <div className="title mb-8 text-white">
             <h1 className="text-4xl tracking-wider leading-none font-bold">
-                JAIME ALEJANDRO A. CARVAJAL II
+                NAME
             </h1>
             <h2 className="text-3xl tracking-wider">
-                Web Developer at Cafe24 Inc
+                Working at ..
             </h2>
         </div>
         <div className="description mb-8 text-white w-4/5">
