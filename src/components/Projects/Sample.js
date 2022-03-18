@@ -1,10 +1,9 @@
-import Box from '../Box';
+import Box from '../Common/Box';
 
 function Sample(props) {
     return (
         <Box>
             <div className="text-white">
-                <h1>ASD</h1>
             </div>
         </Box>
     );

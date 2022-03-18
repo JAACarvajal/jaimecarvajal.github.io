@@ -1,12 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;500;700&display=swap');
 
 :root {
-  --background: #212129;
-  --dark_1: #323949;
-  --dark_2: #3d3e51;
-  --light_1: #40445a;
-  --light_2: #4c5265;
+  --background: #141414;
+  --dark_1: #1b1b1b;
   --white: #FFFFFF;
+  --black: #000000;
 }
 
 body, html {

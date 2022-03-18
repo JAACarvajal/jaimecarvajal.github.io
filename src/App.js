@@ -1,16 +1,18 @@
 import './css/App.css';
-import Container from './components/Container';
+import Container from './components/Common/Container';
+import ContainerCenter from './components/Common/ContainerCenter';
 import About from './components/About';
 import Sample from './components/Projects/Sample';
 
 function App() {
   return (
-    <div className="flex main-app-wrapper">
-      <Container>
+    <div className="flex items-center justify-center main-app-wrapper">
+      <ContainerCenter>
         <About />
-      </Container>
+      </ContainerCenter>
 
       <Container>
+        <Sample />
         <Sample />
       </Container>
     </div>
