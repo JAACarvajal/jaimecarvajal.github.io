@@ -1,0 +1,75 @@
+<template>
+  <nav class="fixed w-full">
+    <div class="flex flex-row h-20 shadow-md w-full bg-white">
+      <div class="w-full flex justify-between items-center px-4">
+        <div class="flex items-center gap-4">
+          <font-awesome-icon class="cursor-pointer" icon="fa-solid fa-user" />
+          <p class="text-lg md:text-xl font-extrabold">
+            JAIME ALEJANDRO A. CARVAJAL II
+          </p>
+        </div>
+        <ul
+          class="hidden md:flex justify-center items-center h-full px-4 gap-6 text-base font-semibold"
+        >
+          <a href="#">HOME</a>
+          <a href="#">ABOUT</a>
+          <a href="#">PROJECTS</a>
+          <a href="#">CONTACT</a>
+        </ul>
+        <font-awesome-icon
+          class="block md:hidden text-2xl cursor-pointer"
+          :icon="bIsToggleDropdown ? 'fa-solid fa-xmark' : 'fa-solid fa-bars'"
+          @click="toggleDropdown"
+        />
+      </div>
+    </div>
+
+    <!-- Dropdown for hamburger list when in mobile view -->
+    <ul
+      v-if="bIsToggleDropdown"
+      class="absolute w-full flex flex-col justify-center items-center text-base font-semibold z-50 bg-white md:hidden top-20 border-2"
+    >
+      <a
+        class="w-full py-4 text-center hover:bg-violet-500 hover:text-white"
+        href="#"
+        >HOME</a
+      >
+      <a
+        class="w-full py-4 text-center hover:bg-violet-500 hover:text-white"
+        href="#"
+        >ABOUT</a
+      >
+      <a
+        class="w-full py-4 text-center hover:bg-violet-500 hover:text-white"
+        href="#"
+        >PROJECTS</a
+      >
+      <a
+        class="w-full py-4 text-center hover:bg-violet-500 hover:text-white"
+        href="#"
+        >CONTACT</a
+      >
+    </ul>
+  </nav>
+</template>
+<script>
+export default {
+  data() {
+    return {
+      /**
+       *
+       */
+      bIsToggleDropdown: false,
+    };
+  },
+  methods: {
+    /**
+     * Toggle dropdown when hamburger/x-mark is clicked
+     * @param {*} oEvent
+     */
+    toggleDropdown(oEvent) {
+      this.bIsToggleDropdown = !this.bIsToggleDropdown;
+    },
+  },
+};
+</script>
