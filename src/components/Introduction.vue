@@ -1,12 +1,18 @@
 <template>
   <div class="text-3xl mx-auto w-full h-full">
-    <div class="flex flex-col place-content-center h-full pt-20 gap-8">
-      <h1 class="text-center font-extrabold text-4xl md:text-7xl">
-        Heyo, I'm Jaime Alejandro A. Carvajal II
-        <span class="text-xl font-normal md:text-2xl">(I know it's long)</span>
+    <div class="flex flex-col place-content-center h-full pt-20 px-10 gap-1">
+      <h1
+        class="text-center font-extrabold text-5xl sm:md:text-7xl leading-snug tracking-widest text-dark-gray"
+      >
+        HEY, I'M JAIME CARVAJAL
       </h1>
-      <h3 class="text-center">A front-end developer from Philippines</h3>
+      <Divider />
+      <h3 class="text-center text-dark-gray">
+        A front-end developer from Philippines
+      </h3>
     </div>
   </div>
 </template>
-<script></script>
+<script setup>
+import Divider from "./reusable/Divider.vue";
+</script>

@@ -1,0 +1,30 @@
+<template>
+  <div class="w-full">
+    <hr
+      class="mx-auto my-4 bg-theme-color border-0 rounded md:my-10"
+      :class="customClass"
+    />
+  </div>
+</template>
+<script>
+export default {
+  /**
+   * Props
+   */
+  props: ["data"],
+  /**
+   * Component variables
+   */
+  data() {
+    return {
+      customClass: "w-8 h-1",
+    };
+  },
+  /**
+   * Mounted hook
+   */
+  mounted() {
+    this.customClass = this.$props.data?.customClass ?? this.customClass;
+  },
+};
+</script>

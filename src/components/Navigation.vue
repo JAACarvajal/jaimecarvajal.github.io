@@ -4,12 +4,14 @@
       <div class="w-full flex justify-between items-center px-4">
         <div class="flex items-center gap-4">
           <font-awesome-icon class="cursor-pointer" icon="fa-solid fa-user" />
-          <p class="text-lg md:text-xl font-extrabold">
-            JAIME ALEJANDRO A. CARVAJAL II
+          <p
+            class="text-lg md:text-xl font-extrabold tracking-wide text-dark-gray"
+          >
+            JAIME CARVAJAL
           </p>
         </div>
         <ul
-          class="hidden md:flex justify-center items-center h-full px-4 gap-6 text-base font-semibold"
+          class="hidden md:flex justify-center items-center h-full px-4 gap-6 text-base font-semibold text-dark-gray"
         >
           <a href="#">HOME</a>
           <a href="#">ABOUT</a>
@@ -27,7 +29,7 @@
     <!-- Dropdown for hamburger list when in mobile view -->
     <ul
       v-if="bIsToggleDropdown"
-      class="absolute w-full flex flex-col justify-center items-center text-base font-semibold z-50 bg-white md:hidden top-20 border-2"
+      class="absolute w-full flex flex-col justify-center items-center text-base font-semibold z-50 bg-white md:hidden top-20 border-2 shadow-md text-dark-gray"
     >
       <a
         class="w-full py-4 text-center hover:bg-violet-500 hover:text-white"
