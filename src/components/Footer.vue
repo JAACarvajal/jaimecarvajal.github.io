@@ -7,15 +7,15 @@
     >
       <div class="flex flex-col w-60 gap-3">
         <h3
-          class="text-xl font-bold leading-snug tracking-wide text-theme-color md:text-2xl"
+          class="text-xl font-bold leading-snug tracking-wide text-theme-color md:text-2xl text-center md:text-left"
         >
           JAIME CARVAJAL
         </h3>
-        <p>jaacarvajal27@gmail.com</p>
+        <p class="text-center md:text-left">jaacarvajal27@gmail.com</p>
       </div>
       <div class="flex flex-col w-30 gap-4">
         <h3
-          class="text-xl md:text-2xl font-bold leading-snug tracking-wide text-theme-color"
+          class="text-xl md:text-2xl font-bold leading-snug tracking-wide text-theme-color text-center md:text-left"
         >
           SOCIALS
         </h3>

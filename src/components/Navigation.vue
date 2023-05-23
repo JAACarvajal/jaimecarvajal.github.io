@@ -3,7 +3,7 @@
     <div class="flex flex-row h-20 shadow-md w-full bg-white">
       <div class="w-full flex justify-between items-center px-4">
         <div class="flex items-center gap-4">
-          <font-awesome-icon class="cursor-pointer" icon="fa-solid fa-user" />
+          <img src="/images/favicon.png" alt="" srcset="">
           <p
             class="text-lg md:text-xl font-extrabold tracking-wide text-dark-gray"
           >

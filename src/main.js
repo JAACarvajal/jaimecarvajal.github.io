@@ -11,10 +11,25 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
 /* import specific icons */
 import { faUserSecret, faBars, faXmark, faUser } from '@fortawesome/free-solid-svg-icons';
-import { faLinkedin, faGithub, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { faLinkedin, faGithub, faInstagram, faVuejs, faHtml5, faCss3, faPhp, faLaravel, faJs, faReact } from '@fortawesome/free-brands-svg-icons';
 
 /* add icons to the library */
-library.add(faUserSecret, faBars, faXmark, faUser, faLinkedin, faGithub, faInstagram);
+library.add(
+    faUserSecret, 
+    faBars, 
+    faXmark, 
+    faUser, 
+    faLinkedin, 
+    faGithub, 
+    faInstagram, 
+    faVuejs, 
+    faHtml5, 
+    faCss3, 
+    faPhp, 
+    faLaravel, 
+    faJs, 
+    faReact
+);
 
 createApp(App)
     .component('font-awesome-icon', FontAwesomeIcon)
