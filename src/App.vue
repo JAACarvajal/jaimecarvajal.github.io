@@ -1,6 +1,6 @@
 <template>
   <div
-    class="h-screen relative bg-[url('/images/background-1.jpg')] bg-no-repeat bg-cover bg-fixed"
+    class="h-screen relative"
   >
     <Navigation />
     <Introduction />

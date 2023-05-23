@@ -1,14 +1,14 @@
 <template>
   <nav class="fixed w-full">
-    <div class="flex flex-row h-20 shadow-md w-full bg-white">
-      <div class="w-full flex justify-between items-center px-4">
+    <div class="flex flex-row h-20 md:h-32 shadow-md w-full bg-white">
+      <div class="w-full flex justify-between items-center px-4 md:px-20">
         <div class="flex items-center gap-4">
-          <img src="/images/favicon.png" alt="" srcset="">
-          <p
+          <img class="w-12 h-12 md:w-24 md:h-24" src="/images/logo.png" alt="" srcset="">
+          <!-- <p
             class="text-lg md:text-xl font-extrabold tracking-wide text-dark-gray"
           >
             JAIME CARVAJAL
-          </p>
+          </p> -->
         </div>
         <ul
           class="hidden md:flex justify-center items-center h-full px-4 gap-6 text-base font-semibold text-dark-gray"

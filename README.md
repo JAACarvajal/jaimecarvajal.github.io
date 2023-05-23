@@ -7,7 +7,16 @@ This template should help get you started developing with Vue 3 in Vite. The tem
 - [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
 
 ## Project Details
-- Portfolio 
+
+- Portfolio
 - Tech
-    - [Vite & Vue](https://tailwindcss.com/docs/guides/vite#vue)
-    - [TailwindCSS](https://tailwindcss.com/docs/installation)
+  - [Vite & Vue](https://tailwindcss.com/docs/guides/vite#vue)
+  - [TailwindCSS](https://tailwindcss.com/docs/installation)
+
+## Project Deployment
+
+- Github Pages
+  1. add `base` in `vite.config.js`
+  2. Create `deploy.yml` under `.guthub\workflows`
+  3. Go to settings of the repository,
+  - `Actions` -> `General` -> `Workflow Permissions` -> `Select Read and Write Permissions` and click `Save`

@@ -1,6 +1,6 @@
 <template>
   <div class="text-3xl mx-auto w-full h-full">
-    <div class="flex flex-col place-content-center h-full pt-20 px-10 gap-1">
+    <div class="flex flex-col place-content-center h-full pt-20 px-10 md:px-20 gap-1">
       <h1
         class="text-center font-extrabold text-5xl sm:md:text-7xl leading-snug tracking-widest text-dark-gray"
       >

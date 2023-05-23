@@ -17,7 +17,7 @@ export default {
    */
   data() {
     return {
-      customClass: "w-8 h-1",
+      customClass: "w-12 h-2",
     };
   },
   /**
