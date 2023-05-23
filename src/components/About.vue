@@ -1,11 +1,11 @@
 <template>
   <div
-    class="flex flex-col place-content-center gap-1 text-3xl mx-auto w-full h-auto md:h-screen p-10 md:p-20"
+    class="flex flex-col place-content-center gap-1 text-3xl mx-auto w-full h-auto md:h-screen p-10 md:p-24"
   >
     <h1
       class="text-center font-extrabold text-5xl sm:md:text-6xl leading-snug tracking-wide text-dark-gray"
     >
-      ABOUT ME
+      <span class="custom-underline">ABOUT ME</span>
     </h1>
     <Divider />
     <div class="flex flex-col md:flex-row gap-12">
@@ -98,3 +98,10 @@
 <script setup>
 import Divider from "./reusable/Divider.vue";
 </script>
+<style scoped>
+.custom-underline {
+    border-bottom: 25px solid rgb(255, 195, 57);
+    display: inline-block;
+    height: 0.99em;
+}
+</style>
