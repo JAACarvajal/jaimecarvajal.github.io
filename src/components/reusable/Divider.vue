@@ -1,9 +1,6 @@
 <template>
   <div class="w-full">
-    <hr
-      class="mx-auto tablet:mx-0 my-4 bg-theme-color border-0 rounded tablet:my-10"
-      :class="customClass"
-    />
+    <hr class="mx-auto tablet:mx-0 my-4 bg-theme-color border-0 rounded tablet:my-10" :class="customClass" />
   </div>
 </template>
 <script>

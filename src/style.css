@@ -22,4 +22,20 @@
     @apply h-[1.2em];
     @apply border-b-[16px];
   }
+
+  .custom-sub-underline {
+    @apply inline-block;
+    @apply border-solid;
+    @apply border-purple-500;
+    @apply h-[1.3em];
+    @apply border-b-[15px];
+  }
+
+  .mobile-custom-sub-underline {
+    @apply inline-block;
+    @apply border-solid;
+    @apply border-purple-500;
+    @apply h-[1.2em];
+    @apply border-b-[16px];
+  }
 }

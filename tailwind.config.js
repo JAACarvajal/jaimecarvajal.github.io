@@ -23,7 +23,7 @@ export default {
       colors: {
         'dark-gray': '#323232',
         'theme-color': '#ffc339'
-      }
+      },
     },
   },
   plugins: [],

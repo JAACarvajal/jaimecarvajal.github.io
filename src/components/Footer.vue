@@ -50,6 +50,11 @@
     </div>
   </div>
 </template>
-<script setup>
+<script>
 import Divider from "./reusable/Divider.vue";
+export default {
+  components: {
+    Divider
+  }
+}
 </script>
