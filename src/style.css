@@ -2,3 +2,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/**
+* Additional custom utility classes
+*/
+@layer utilities {
+  .custom-underline {
+    @apply inline-block;
+    @apply border-solid;
+    @apply border-theme-color;
+    @apply h-[0.99em];
+    @apply border-b-[25px];
+  }
+
+  .mobile-custom-underline {
+    @apply inline-block;
+    @apply border-solid;
+    @apply border-theme-color;
+    @apply h-[1.2em];
+    @apply border-b-[16px];
+  }
+}

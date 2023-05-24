@@ -1,7 +1,7 @@
 <template>
   <div class="w-full">
     <hr
-      class="mx-auto my-4 bg-theme-color border-0 rounded md:my-10"
+      class="mx-auto tablet:mx-0 my-4 bg-theme-color border-0 rounded tablet:my-10"
       :class="customClass"
     />
   </div>

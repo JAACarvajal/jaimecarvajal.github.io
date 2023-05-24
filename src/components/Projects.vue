@@ -8,6 +8,7 @@
       PROJECTS
     </h1>
     <Divider />
+    <div class=""></div>
   </div>
 </template>
 <script setup>
