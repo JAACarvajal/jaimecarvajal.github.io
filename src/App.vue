@@ -1,6 +1,7 @@
 <template>
   <div class="h-screen relative">
     <Navigation />
+    <Sidebar />
     <Introduction />
     <About />
     <Projects />
@@ -10,6 +11,7 @@
 
 <script>
 import Navigation from "./components/Navigation.vue";
+import Sidebar from "./components/Sidebar.vue";
 import Introduction from "./components/Introduction.vue";
 import About from "./components/About.vue";
 import Projects from "./components/Projects.vue";
@@ -17,6 +19,7 @@ import Footer from "./components/Footer.vue";
 export default {
   components: {
     Navigation,
+    Sidebar,
     Introduction,
     About,
     Projects,
@@ -69,10 +72,10 @@ export default {
 
       this.lastScrollPosition = currentScrollPosition;
 
-      const threshold = 100; // Adjust the threshold as needed
-      if (currentScrollPosition >= threshold) {
-        this.scrollToSection();
-      }
+      // const threshold = 100; // Adjust the threshold as needed
+      // if (currentScrollPosition >= threshold) {
+      //   this.scrollToSection();
+      // }
     },
     scrollToSection() {
       // if (this.scrollDirection === 'down') {
@@ -93,9 +96,37 @@ export default {
       // targetSection.scrollIntoView({behavior: "smooth"});
       // }
     },
-    handleScroll() {
+    handleNavigation() {
+      if (window.pageYOffset > 0) {
+        document.getElementById('main_nav_list').classList.remove('tablet:flex');
+
+        document.getElementById('nav_cont').classList.remove('tablet:h-32');
+        document.getElementById('nav_cont').classList.add('tablet:h-16');
+
+        document.getElementById('nav_logo').classList.remove('tablet:w-28');
+        document.getElementById('nav_logo').classList.add('tablet:w-14');
+
+        document.getElementById('nav_logo').classList.remove('tablet:h-28');
+        document.getElementById('nav_logo').classList.add('tablet:h-14');
+      } else {
+        console.log('on top');
+        document.getElementById('main_nav_list').classList.add('tablet:flex');
+
+        document.getElementById('nav_cont').classList.remove('tablet:h-16');
+        document.getElementById('nav_cont').classList.add('tablet:h-32');
+
+        document.getElementById('nav_logo').classList.remove('tablet:w-14');
+        document.getElementById('nav_logo').classList.add('tablet:w-28');
+
+        document.getElementById('nav_logo').classList.remove('tablet:h-14');
+        document.getElementById('nav_logo').classList.add('tablet:h-28');
+      }
+    },
+    handleScroll(event) {
+      this.handleNavigation();
+      event.preventDefault();
       // this.setScrollDirection();
-      this.scrollToSection();
+      // this.scrollToSection();
     }
   },
   /**
@@ -103,7 +134,7 @@ export default {
    */
   mounted() {
     this.currentViewedSection = 0;
-    // window.addEventListener('scroll', this.handleScroll);
+    window.addEventListener('scroll', this.handleScroll);
   },
   // beforeDestroy() {
   //   window.removeEventListener('scroll', this.handleScroll);

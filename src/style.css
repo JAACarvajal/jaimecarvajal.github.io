@@ -8,34 +8,26 @@
 */
 @layer utilities {
   .custom-underline {
-    @apply inline-block;
-    @apply border-solid;
-    @apply border-theme-color;
-    @apply h-[0.99em];
-    @apply border-b-[25px];
+    @apply shadow-[inset_0_-35px_0_rgb(255,195,57)];
   }
 
   .mobile-custom-underline {
-    @apply inline-block;
-    @apply border-solid;
-    @apply border-theme-color;
-    @apply h-[1.2em];
-    @apply border-b-[16px];
+    @apply shadow-[inset_0_-25px_0_rgb(255,195,57)];
   }
 
   .custom-sub-underline {
-    @apply inline-block;
-    @apply border-solid;
-    @apply border-purple-500;
-    @apply h-[1.3em];
-    @apply border-b-[15px];
+    @apply shadow-[inset_0_-16px_0_rgb(168,85,247)];
   }
 
   .mobile-custom-sub-underline {
-    @apply inline-block;
-    @apply border-solid;
-    @apply border-purple-500;
-    @apply h-[1.2em];
-    @apply border-b-[16px];
+    @apply shadow-[inset_0_-13px_0_rgb(168,85,247)];
   }
+
+  .custom-extra-sm-sub-underline {
+    @apply shadow-[inset_0_-12px_0_rgb(168,85,247)];
+  }
+
+  /* .fa-brands {
+    font-size: 4em !important;
+  } */
 }

@@ -3,18 +3,19 @@ export default {
   content: [
     "./index.html",
     "./src/**/*.{vue,js,ts,jsx,tsx}",
+    "./node_modules/flowbite/**/*.js"
   ],
   theme: {
     extend:
     {
       screens: {
-        'tablet': '640px',
-        // => @media (min-width: 640px) { ... }
+        'tb': '639px',
+        // => @media (min-width: 640639pxpx) { ... }
   
-        'laptop': '1024px',
+        'lp': '1024px',
         // => @media (min-width: 1024px) { ... }
   
-        'desktop': '1280px',
+        'pc': '1280px',
         // => @media (min-width: 1280px) { ... }
       },
       fontFamily: {
@@ -26,6 +27,8 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('flowbite/plugin')
+  ],
 }
 
