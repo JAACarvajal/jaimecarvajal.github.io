@@ -16,7 +16,17 @@ This template should help get you started developing with Vue 3 in Vite. The tem
 ## Project Deployment
 
 - Github Pages
+
   1. add `base` in `vite.config.js`
   2. Create `deploy.yml` under `.guthub\workflows`
   3. Go to settings of the repository,
+
   - `Actions` -> `General` -> `Workflow Permissions` -> `Select Read and Write Permissions` and click `Save`
+
+  ## TODO
+
+  - Refactor (getCurrentViewedSection)
+  - Divide component on nav list
+  - Use ref instead of getElementById
+  - Run animations when section is viewed
+  - Dark mode

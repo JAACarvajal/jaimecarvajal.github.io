@@ -109,7 +109,6 @@ export default {
         document.getElementById('nav_logo').classList.remove('tablet:h-28');
         document.getElementById('nav_logo').classList.add('tablet:h-14');
       } else {
-        console.log('on top');
         document.getElementById('main_nav_list').classList.add('tablet:flex');
 
         document.getElementById('nav_cont').classList.remove('tablet:h-16');

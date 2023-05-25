@@ -1,9 +1,9 @@
 <template>
   <div id="introduction_section" class="text-3xl mx-auto w-full h-full">
     <div class="text-center flex flex-col place-content-center justify-center h-full pt-20 px-10 lp:px-32 gap-1">
-      <h1 ref="introduction"
+      <h1 id="introduction_title" ref="introduction_title"
         class="custom-animated font-extrabold text-5xl sm:lp:text-7xl leading-snug tracking-widest text-dark-gray w-auto translate-x-20 opacity-0 duration-700"
-        :class="setTextSlideAnimationClasses('introduction', 250)">
+        :class="setTextSlideAnimationClasses('introduction_title', 250)">
         HEY,
         <br class="hidden" />
         I'M

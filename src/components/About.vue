@@ -39,7 +39,7 @@
       </div>
       <div class="lp:w-1/2 flex flex-col gap-8">
         <h3 ref="skills_and_tech_title"
-          class="text-center lp:text-left font-bold text-3xl leading-snug tracking-wide translate-x-20 opacity-0 duration-700"
+          class="text-center lp:text-left font-bold text-2xl lp:text-3xl leading-snug tracking-wide translate-x-20 opacity-0 duration-700"
           :class="setTextSlideAnimationClasses('skills_and_tech_title', 1000)">
           <!-- SKILLS & TECHNOLOGIES -->
           <span class="mobile-custom-sub-underline lp:custom-sub-underline">SKILLS & TECHNOLOGIES</span>

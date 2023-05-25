@@ -1,23 +1,34 @@
 <template>
-    <nav id="nav_side_bar" class="hidden fixed w-full top-[42%] left-[97%]">
-        <!-- Dropdown for hamburger list when in mobile view -->
+    <nav ref="nav_side_bar" id="nav_side_bar"
+        class="fixed w-full top-[42%] left-[93%] tb:left-[96%] lp:left-[98%] translate-x-20 opacity-0 duration-200">
         <ul class="absolute flex flex-col gap-8">
-            <a href="#" @click="scrollToSection($event, 'introduction_section')">
-                <font-awesome-icon icon="fa-regular fa-circle" style="font-size: 1em; color: #323232;" />
-            </a>
-            <a href="#" @click="scrollToSection($event, 'about_section')">
-                <font-awesome-icon icon="fa-regular fa-circle" style="font-size: 1em; color: #323232;" />
-            </a>
-            <a href="#" @click="scrollToSection($event, 'project_section')">
-                <font-awesome-icon icon="fa-regular fa-circle" style="font-size: 1em; color: #323232;" />
-            </a>
+            <SidebarItem @update-selected="(section) => updateSelected(section)" section="introduction_section"
+                :currentSelected="currentSelected" />
+            <SidebarItem @update-selected="(section) => updateSelected(section)" section="about_section"
+                :currentSelected="currentSelected" />
+            <SidebarItem @update-selected="(section) => updateSelected(section)" section="project_section"
+                :currentSelected="currentSelected" />
         </ul>
     </nav>
 </template>
 <script>
+import SidebarItem from './reusable/Navigation/SidebarItem.vue';
 import { scrollMixin } from '../mixins/scroll-mixin';
 export default {
-    mixins: [scrollMixin]
+    components: {
+        SidebarItem
+    },
+    data() {
+        return {
+            currentSelected: 'introduction_section'
+        }
+    },
+    methods: {
+        updateSelected(currentSelected) {
+            this.currentSelected = currentSelected;
+        }
+    },
+    mixins: [scrollMixin],
 };
 </script>
   
