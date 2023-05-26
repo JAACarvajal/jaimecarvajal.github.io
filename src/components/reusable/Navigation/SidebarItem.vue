@@ -1,14 +1,15 @@
 <template>
-    <a href="#" @click="[scrollToSection($event, section)]">
-        <font-awesome-icon :icon="isSelected ? 'fa-solid fa-circle' : 'fa-regular fa-circle'"
-            style="font-size: 12px; color: #323232;" />
+    <a href="#" class="text-center" @click="[scrollToSection($event, section)]">
+        <font-awesome-icon v-if="isSelected" icon='fa-solid fa-circle' style="font-size: 13px; color: #323232;" />
+        <font-awesome-icon v-else icon='fa-regular fa-circle' style="font-size: 10px; color: #323232;" />
     </a>
 </template>
 <script>
-import { scrollMixin } from '../../../mixins/scroll-mixin';
 export default {
-    props: ['section', 'currentSelected'],
-    mixins: [scrollMixin],
+    props: {
+        section: String,
+        currentSelected: String
+    },
     data() {
         return {
             isSelected: false,

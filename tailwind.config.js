@@ -23,7 +23,8 @@ export default {
       },
       colors: {
         'dark-gray': '#323232',
-        'theme-color': '#ffc339'
+        'theme-color': '#ffc339',
+        'theme-color-2': 'rgb(168,85,247)',
       },
     },
   },

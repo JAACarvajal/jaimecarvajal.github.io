@@ -16,7 +16,7 @@ export const scrollMixin = {
     methods: {
         /**
          * Scroll to a page section smoothly
-         * @param {*} sectionID 
+         * @param {*} sectionID
          */
         scrollToSection(event, sectionID) {
             // Get target section
@@ -77,42 +77,31 @@ export const scrollMixin = {
             }
         },
         getCurrentViewedSection() {
-            const introRect = document.getElementById('introduction_section').getBoundingClientRect();
-            const aboutRect = document.getElementById('about_section').getBoundingClientRect();
-            const projectsRect = document.getElementById('project_section').getBoundingClientRect();
-
-            if ((
-                introRect.top >= (-(introRect.height - (introRect.height * .33))) &&
-                introRect.bottom <= (introRect.height + (introRect.height * .66))
-            )) {
-                this.currentViewedSection = 'introduction_section';
-                return;
+            for (const elementId of this.sectionIds) {
+                if (this.checkIfElementIsOnViewPort(elementId)) {
+                    this.currentViewedSection = elementId;
+                    break;
+                }
             }
-
-            if ((
-                aboutRect.top >= (-(aboutRect.height - (aboutRect.height * .33))) &&
-                aboutRect.bottom <= (aboutRect.height + (aboutRect.height * .66))
-            )) {
-                this.currentViewedSection = 'about_section'; 
-                return;
-            }
-
-            if ((
-                projectsRect.top >= (-(projectsRect.height - (projectsRect.height * .33))) &&
-                projectsRect.bottom <= (projectsRect.height + (projectsRect.height * .66))
-            )) {
-                this.currentViewedSection = 'project_section'; 
-                return;
-            }
+        },
+        checkIfElementIsOnViewPort(elementId) {
+            const rect = document.getElementById(elementId).getBoundingClientRect();
+            
+            return (
+                rect.top >= (-(rect.height - (rect.height * .50))) // Set this lower
+                &&
+                rect.bottom <= (rect.height + (rect.height * .50)) // Set this higher
+            );
         },
         /**
          * Handle scroll event
-         * @param {*} event 
+         * @param {*} event
          */
         handleScroll(event) {
             this.getCurrentViewedSection();
             this.handleNavigationBarShrink();
             this.showElementsWhenNotOnTopPage();
+            console.log(this.currentViewedSection);
             event.preventDefault();
         },
     },

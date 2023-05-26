@@ -2,6 +2,7 @@ import { createApp } from 'vue';
 import './style.css';
 import App from './App.vue';
 import helperPlugin from './plugins/helpers';
+import {scrollMixin} from './mixins/scroll-mixin';
 
 
 // Set up font awesome the library
@@ -12,7 +13,7 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
 /* import specific icons */
-import { faUserSecret, faBars, faXmark, faUser, faCircle, faHouse, faIdBadge, faLaptopCode } from '@fortawesome/free-solid-svg-icons';
+import { faUserSecret, faBars, faXmark, faUser, faCircle, faHouse, faIdBadge, faLaptopCode, faMoon } from '@fortawesome/free-solid-svg-icons';
 import { faCircle as faCircleRegular } from '@fortawesome/free-regular-svg-icons';
 import { faLinkedin, faGithub, faInstagram, faVuejs, faHtml5, faCss3, faPhp, faLaravel, faJs, faReact } from '@fortawesome/free-brands-svg-icons';
 
@@ -20,6 +21,7 @@ import { faLinkedin, faGithub, faInstagram, faVuejs, faHtml5, faCss3, faPhp, faL
 library.add(
     faUserSecret, 
     faHouse,
+    faMoon,
     faLaptopCode,
     faIdBadge,
     faCircle,
@@ -35,11 +37,12 @@ library.add(
     faCss3, 
     faPhp, 
     faLaravel, 
-    faJs, 
+    faJs,
     faReact
 );
 
 const app = createApp(App);
-app.use(helperPlugin, {})
+app.mixin(scrollMixin);
+app.use(helperPlugin, {});
 app.component('font-awesome-icon', FontAwesomeIcon);
 app.mount('#app');
