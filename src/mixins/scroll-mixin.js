@@ -1,7 +1,7 @@
 /**
  * Mixin for scroll
  */
-export const scrollMixin = {
+export default {
     data() {
         return {
             elementsToShowWhenNotOnTopPage: ['nav_side_bar'],
@@ -14,6 +14,20 @@ export const scrollMixin = {
         }
     },
     methods: {
+        setScrollDirection() {
+            // Get currenct scroll position
+            const currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+      
+            if (currentScrollPosition > this.lastScrollPosition) {
+              // Scrolling down
+              this.scrollDirection = 'down';
+            } else if (currentScrollPosition < this.lastScrollPosition) {
+              // Scrolling up
+              this.scrollDirection = 'up';
+            }
+      
+            this.lastScrollPosition = currentScrollPosition;
+          },
         /**
          * Scroll to a page section smoothly
          * @param {*} sectionID
@@ -101,7 +115,6 @@ export const scrollMixin = {
             this.getCurrentViewedSection();
             this.handleNavigationBarShrink();
             this.showElementsWhenNotOnTopPage();
-            console.log(this.currentViewedSection);
             event.preventDefault();
         },
     },

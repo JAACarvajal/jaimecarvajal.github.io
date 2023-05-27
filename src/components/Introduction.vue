@@ -22,10 +22,8 @@
 </template>
 <script>
 import Divider from './reusable/Divider.vue';
-import { animationMixin } from '../mixins/custom-animation-mixin';
 export default {
   components: { Divider },
-  mixins: [animationMixin],
   data() {
     return {
       isViewed: true

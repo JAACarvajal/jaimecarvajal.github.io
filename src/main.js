@@ -2,8 +2,8 @@ import { createApp } from 'vue';
 import './style.css';
 import App from './App.vue';
 import helperPlugin from './plugins/helpers';
-import {scrollMixin} from './mixins/scroll-mixin';
-
+import scrollMixin from './mixins/scroll-mixin';
+import animationMixin from './mixins/custom-animation-mixin';
 
 // Set up font awesome the library
 /* import the fontawesome core */
@@ -43,6 +43,7 @@ library.add(
 
 const app = createApp(App);
 app.mixin(scrollMixin);
+app.mixin(animationMixin);
 app.use(helperPlugin, {});
 app.component('font-awesome-icon', FontAwesomeIcon);
 app.mount('#app');

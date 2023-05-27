@@ -9,8 +9,11 @@ export default {
     extend:
     {
       screens: {
-        'tb': '639px',
-        // => @media (min-width: 640639pxpx) { ... }
+        'mb': '360px',
+        // => @media (min-width: 360px) { ... }
+
+        'tb': '640px',
+        // => @media (min-width: 640px) { ... }
   
         'lp': '1024px',
         // => @media (min-width: 1024px) { ... }

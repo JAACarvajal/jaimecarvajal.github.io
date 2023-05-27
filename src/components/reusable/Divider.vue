@@ -7,13 +7,11 @@
   </div>
 </template>
 <script>
-import { animationMixin } from '../../mixins/custom-animation-mixin';
 export default {
   /**
    * Props
    */
   props: ["data", "isViewed", "refId", "isWithAnimation"],
-  mixins: [animationMixin],
   /**
    * Component variables
    */

@@ -17,19 +17,19 @@
         </h3>
         <div ref="get_to_know_desc" class="flex flex-col gap-4 translate-x-20 opacity-0 duration-700"
           :class="isViewed ? setSlideAnimationClasses('get_to_know_desc', 450) : ''">
-          <p class="text-xl leading-snug">
+          <p class="text-base tb:text-xl">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta
             blanditiis consectetur commodi reiciendis doloremque ex, tenetur
             culpa. Sapiente doloribus, aut fugit perspiciatis cupiditate molestiae
             natus reprehenderit quod placeat sint officia.
           </p>
-          <p class="text-xl leading-snug">
+          <p class="text-base tb:text-xl">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta
             blanditiis consectetur commodi reiciendis doloremque ex, tenetur
             culpa. Sapiente doloribus, aut fugit perspiciatis cupiditate molestiae
             natus reprehenderit quod placeat sint officia.
           </p>
-          <p class="text-xl leading-snug">
+          <p class="text-base tb:text-xl">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta
             blanditiis consectetur commodi reiciendis doloremque ex, tenetur
             culpa. Sapiente doloribus, aut fugit perspiciatis cupiditate molestiae
@@ -47,8 +47,13 @@
         <div ref="skills_and_tech_desc"
           class="flex flex-row flex-wrap gap-8 justify-center lp:justify-start translate-x-20 opacity-0 duration-700"
           :class="isViewed ? setSlideAnimationClasses('skills_and_tech_desc', 750) : ''">
-          <div v-for="(skill, index) in skillsList" :key="index" class="flex flex-row justify-center items-center gap-2">
-            <Icon :iconName="skill.icon_name" style="font-size: 3.5em;" />
+          <div v-for="(skill, index) in skillsList" :key="index"
+            class="flex tb:hidden flex-row justify-center items-center gap-2">
+            <Icon :iconName="skill.icon_name" style="font-size: 2em;" />
+          </div>
+          <div v-for="(skill, index) in skillsList" :key="index"
+            class="hidden tb:flex flex-row justify-center items-center gap-2">
+            <Icon :iconName="skill.icon_name" style="font-size: 3.3em;" />
           </div>
         </div>
       </div>
@@ -60,7 +65,6 @@ import { skills } from '../constants';
 import { initFlowbite } from 'flowbite';
 import Divider from "./reusable/Divider.vue";
 import Icon from "./reusable/Icon.vue";
-import { animationMixin } from '../mixins/custom-animation-mixin';
 export default {
   components: {
     Divider,
@@ -72,7 +76,6 @@ export default {
       skillsList: skills
     }
   },
-  mixins: [animationMixin],
   watch: {
     currentViewedSection(newValue, oldValue) {
       this.isViewed = newValue === 'about_section';

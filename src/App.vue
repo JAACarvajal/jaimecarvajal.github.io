@@ -24,22 +24,6 @@ export default {
     About,
     Projects,
     Footer,
-  },
-  methods: {
-    setScrollDirection() {
-      // Get currenct scroll position
-      const currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop;
-
-      if (currentScrollPosition > this.lastScrollPosition) {
-        // Scrolling down
-        this.scrollDirection = 'down';
-      } else if (currentScrollPosition < this.lastScrollPosition) {
-        // Scrolling up
-        this.scrollDirection = 'up';
-      }
-
-      this.lastScrollPosition = currentScrollPosition;
-    }
   }
 }
 </script>

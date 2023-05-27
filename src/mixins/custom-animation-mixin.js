@@ -1,16 +1,20 @@
 /**
  * Mixin for animations
  */
-export const animationMixin = {
+export default {
   /**
    * 
    */
   methods: {
     setSlideAnimationClasses(reference, delay = 500) {
-      setTimeout(() => {
-        this.$refs[reference].classList.remove('translate-x-20', 'opacity-0');
-        this.$refs[reference].classList.add('translate-x-0', 'opacity-100');
-        }, delay);
+      this.$nextTick(() => {
+        const element = this.$refs[reference] instanceof HTMLElement ? this.$refs[reference] : this.$refs[reference][0];
+
+        setTimeout(() => {
+          element.classList.remove('translate-x-20', 'opacity-0');
+          element.classList.add('translate-x-0', 'opacity-100');
+          }, delay);
+      })
     }
   }
 };
