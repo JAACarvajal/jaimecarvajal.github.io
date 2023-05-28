@@ -23,6 +23,25 @@ export default {
 
         targetElement.classList.remove(classToRemove);
         targetElement.classList.add(classToAdd);
+    },
+    app.config.globalProperties.$getDevice = () => {
+      const pageWidth = window.innerWidth;
+      if (pageWidth <= 639) {
+        return 'mobile'
+      }
+
+
+      if (pageWidth >= 640 && pageWidth <= 1023) {
+        return 'tablet'
+      }
+
+      if (pageWidth >= 1024 && pageWidth <= 1279) {
+        return 'laptop'
+      }
+
+      if (pageWidth >= 1280) {
+        return 'pc'
+      }
     }
   }
 }

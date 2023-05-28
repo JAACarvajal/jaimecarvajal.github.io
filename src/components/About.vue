@@ -1,6 +1,6 @@
 <template>
   <div ref="about_section" id="about_section"
-    class="flex flex-col place-content-center gap-1 text-3xl mx-auto w-full h-auto lp:h-screen py-10 px-10 lp:px-32 text-dark-gray">
+    class="flex flex-col place-content-center gap-1 text-3xl mx-auto w-full h-auto lp:h-screen py-10 px-10 lp:px-32 text-dark-gray bg-light-gray">
     <h1 ref="main_title"
       class="text-center font-extrabold text-5xl sm:lp:text-7xl leading-snug tracking-wide translate-x-20 opacity-0 duration-700"
       :class="isViewed ? setSlideAnimationClasses('main_title', 0) : ''">

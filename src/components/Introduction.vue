@@ -17,6 +17,10 @@
         A front-end developer from
         Philippines
       </h3>
+      <div class="absolute left-1/2 top-1/2 -translate-x-1/2 translate-y-[80%] bottom-0 hover:cursor-pointer"
+        @click="scrollToSection($event, 'about_section')">
+        <font-awesome-icon class="animate-bounce" icon="fa-solid fa-angle-down" />
+      </div>
     </div>
   </div>
 </template>

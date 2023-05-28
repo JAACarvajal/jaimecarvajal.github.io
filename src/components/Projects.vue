@@ -12,12 +12,17 @@
         <Project :projectData="project" :isViewed="isViewed" :index="index" />
       </div>
     </div>
+    <div ref="more_to_come_projects" class="flex justify-center mt-10 translate-x-20 opacity-0 duration-700"
+      :class="isViewed ? setSlideAnimationClasses('more_to_come_projects', 500) : ''">
+      <h1 class="text-lg">(more to come soon)</h1>
+    </div>
   </div>
 </template>
 <script>
 import Divider from "./reusable/Divider.vue";
 import Project from "./reusable/Projects/Project.vue";
 import { projects } from '../constants';
+
 export default {
   components: {
     Divider,

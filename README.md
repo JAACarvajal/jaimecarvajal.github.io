@@ -28,5 +28,7 @@ This template should help get you started developing with Vue 3 in Vite. The tem
   - Refactor (getCurrentViewedSection) - DONE
   - Divide component on nav list - DONE
   - Use ref instead of getElementById - DONE
-  - Run animations when section is viewed
+  - Run animations when section is viewed - DONE
+  - Added contact me section (email and resume button)
+  - add go up button
   - Dark mode

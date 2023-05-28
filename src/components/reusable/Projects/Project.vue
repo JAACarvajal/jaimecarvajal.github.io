@@ -1,8 +1,13 @@
 <template>
-    <ProjectInfo v-if="index % 2 === 0" :projectData="projectData" :isViewed="isViewed" />
-    <ProjectImage v-else :projectData="projectData" :isViewed="isViewed" />
-    <ProjectImage v-if="index % 2 === 0" :projectData="projectData" :isViewed="isViewed" />
-    <ProjectInfo v-else :projectData="projectData" :isViewed="isViewed" />
+    <template v-if="index % 2 === 0 && this.device !== 'mobile'">
+        <ProjectInfo :projectData="projectData" :isViewed="isViewed" />
+        <ProjectImage :projectData="projectData" :isViewed="isViewed" />
+
+    </template>
+    <template v-else>
+        <ProjectImage :projectData="projectData" :isViewed="isViewed" />
+        <ProjectInfo :projectData="projectData" :isViewed="isViewed" />
+    </template>
 </template>
 <script>
 import ProjectImage from "./ProjectImage.vue";
@@ -16,6 +21,11 @@ export default {
         projectData: Object,
         isViewed: Boolean,
         index: Number
+    },
+    data() {
+        return {
+            device: this.$getDevice()
+        }
     }
 };
 </script>

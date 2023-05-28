@@ -1,6 +1,6 @@
 <template>
   <nav class="fixed w-full z-50">
-    <div ref="nav_cont" id="nav_cont" class="flex flex-row h-20 lp:h-32 border-b-[1px] w-full bg-white duration-200">
+    <div ref="nav_cont" id="nav_cont" class="flex flex-row h-20 lp:h-32 shadow-md w-full bg-white duration-200">
       <div ref="nav_sub_cont" id="nav_sub_cont" class="w-full flex justify-between items-center px-4 lp:px-28">
         <div class="flex items-center gap-4 w-1/2">
           <img ref="nav_logo" id="nav_logo" class="w-12 h-12 lp:w-24 lp:h-24 duration-200" src="/images/logo.png"

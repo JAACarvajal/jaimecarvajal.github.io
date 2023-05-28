@@ -26,6 +26,7 @@ export default {
       },
       colors: {
         'dark-gray': '#323232',
+        'light-gray': '#F5F5F5',
         'theme-color': '#ffc339',
         'theme-color-2': 'rgb(168,85,247)',
       },

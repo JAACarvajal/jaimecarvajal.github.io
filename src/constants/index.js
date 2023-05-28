@@ -36,12 +36,5 @@ export const projects = [
         animation_delay: 300,
         image_file_name: 'experts_cafe24_laptop.png',
         description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta blanditiis consectetur commodi reiciendis doloremque ex, tenetur culpa. Sapiente doloribus, aut fugit perspiciatis cupiditate molestiae natus reprehenderit quod placeat sint officia.'
-    },
-    {
-        name: 'PROJECT 1',
-        ref: 'project_1',
-        animation_delay: 450,
-        image_file_name: 'experts_cafe24_laptop.png',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta blanditiis consectetur commodi reiciendis doloremque ex, tenetur culpa. Sapiente doloribus, aut fugit perspiciatis cupiditate molestiae natus reprehenderit quod placeat sint officia.'
-    },
+    }
 ];
