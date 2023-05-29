@@ -5,6 +5,7 @@
     <Introduction />
     <About />
     <Projects />
+    <Contact />
     <Footer />
   </div>
 </template>
@@ -15,6 +16,7 @@ import Sidebar from "./components/Sidebar.vue";
 import Introduction from "./components/Introduction.vue";
 import About from "./components/About.vue";
 import Projects from "./components/Projects.vue";
+import Contact from "./components/Contact.vue";
 import Footer from "./components/Footer.vue";
 export default {
   components: {
@@ -23,6 +25,7 @@ export default {
     Introduction,
     About,
     Projects,
+    Contact,
     Footer,
   }
 }

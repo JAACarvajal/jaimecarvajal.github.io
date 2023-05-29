@@ -12,7 +12,7 @@
       </h1>
       <Divider refId="introdution_divider" :is-viewed="isViewed" :is-with-animation="true" />
       <h3 ref="introduction_sub"
-        class="text-dark-gray text-xl lp:text-3xl font-medium translate-x-20 opacity-0 duration-700"
+        class="text-dark-gray text-xl lp:text-2xl font-medium translate-x-20 opacity-0 duration-700"
         :class="isViewed ? setSlideAnimationClasses('introduction_sub', 300) : ''">
         A front-end developer from
         Philippines

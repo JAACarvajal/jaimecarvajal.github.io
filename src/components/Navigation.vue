@@ -11,7 +11,7 @@
           <NavBarItem section="introduction_section" text="HOME" :isMobile="false" />
           <NavBarItem section="about_section" text="ABOUT" :isMobile="false" />
           <NavBarItem section="project_section" text="PROJECTS" :isMobile="false" />
-          <NavBarItem section="project_section" text="CONTACT" :isMobile="false" />
+          <NavBarItem section="contact_section" text="CONTACT" :isMobile="false" />
           <SwitchModeButton />
         </ul>
         <ul ref="main_nav_shrinked_list" id="main_nav_shrinked_list"
@@ -36,6 +36,7 @@
 import MobileNav from "./reusable/Navigation/MobileNav.vue";
 import NavBarItem from "./reusable/Navigation/NavBarItem.vue";
 import SwitchModeButton from "./reusable/Navigation/SwitchModeButton.vue";
+
 export default {
   components: {
     MobileNav,

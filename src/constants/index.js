@@ -38,3 +38,10 @@ export const projects = [
         description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta blanditiis consectetur commodi reiciendis doloremque ex, tenetur culpa. Sapiente doloribus, aut fugit perspiciatis cupiditate molestiae natus reprehenderit quod placeat sint officia.'
     }
 ];
+
+export const sections = [
+    'introduction_section',
+    'about_section',
+    'project_section',
+    'contact_section'
+];

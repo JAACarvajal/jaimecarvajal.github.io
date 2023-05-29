@@ -1,5 +1,9 @@
 <template>
-    <template v-if="index % 2 === 0 && this.device !== 'mobile'">
+    <template v-if="this.device === 'mobile' || this.device === 'tablet'">
+        <ProjectInfo :projectData="projectData" :isViewed="isViewed" />
+        <ProjectImage :projectData="projectData" :isViewed="isViewed" />
+    </template>
+    <template v-else-if="index % 2 === 0 && (this.device !== 'mobile' && this.device !== 'tablet')">
         <ProjectInfo :projectData="projectData" :isViewed="isViewed" />
         <ProjectImage :projectData="projectData" :isViewed="isViewed" />
 

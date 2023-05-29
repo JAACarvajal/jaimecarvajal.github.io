@@ -1,3 +1,5 @@
+import { sections } from '../constants';
+
 /**
  * Mixin for scroll
  */
@@ -5,11 +7,7 @@ export default {
     data() {
         return {
             elementsToShowWhenNotOnTopPage: ['nav_side_bar'],
-            sectionIds: [
-                'introduction_section',
-                'about_section',
-                'project_section'
-            ],
+            sectionIds: sections,
             currentViewedSection: 'introduction_section'
         }
     },
@@ -115,6 +113,7 @@ export default {
             this.getCurrentViewedSection();
             this.handleNavigationBarShrink();
             this.showElementsWhenNotOnTopPage();
+            console.log(this.currentViewedSection);
             event.preventDefault();
         },
     },
