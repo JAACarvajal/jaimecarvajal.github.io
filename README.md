@@ -31,4 +31,5 @@ This template should help get you started developing with Vue 3 in Vite. The tem
   - Run animations when section is viewed - DONE
   - Added contact me section (email and resume button)
   - add go up button
+  - add documentation
   - Dark mode
