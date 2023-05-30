@@ -25,6 +25,8 @@ export default {
         'sans': ['Titillium Web', 'sans-serif']
       },
       colors: {
+        'dark-theme': '#1B0044',
+        'purple': '#892CDC',
         'dark-gray': '#323232',
         'light-gray': '#F5F5F5',
         'theme-color': '#ffc339',

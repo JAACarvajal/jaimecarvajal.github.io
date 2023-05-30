@@ -1,12 +1,13 @@
 <template>
   <div class="h-screen relative">
     <Navigation />
-    <Sidebar />
+    <Sidebar sidebar-position="right" list="navigation" />
+    <Sidebar sidebar-position="left" list="socials" />
     <Introduction />
     <About />
     <Projects />
     <Contact />
-    <Footer />
+    <!-- <Footer /> -->
   </div>
 </template>
 

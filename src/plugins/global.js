@@ -1,9 +1,16 @@
 export default {
   install(app, options) {
-    // inject a globally available $translate() method
-    app.config.globalProperties.$toggleClasses = (elementId, classToAdd = null, classToRemove = null | 'toggle') => {
+    app.config.globalProperties.$handleMultipleClasses = (elementId, classToAlter, method) => {
       const targetElement = document.getElementById(elementId);
-        // Add only
+
+      classToAlter.forEach(c => {
+        targetElement.classList[method](c);
+      });
+      return;
+    },
+    app.config.globalProperties.$toggleClasses = (elementId, classToAdd = null, classToRemove = null | 'toggle') => {
+        const targetElement = document.getElementById(elementId);
+
         if (classToRemove === 'toggle') {
             targetElement.classList.toggle(classToAdd);
             return;

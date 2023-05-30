@@ -6,9 +6,19 @@ import { sections } from '../constants';
 export default {
     data() {
         return {
-            elementsToShowWhenNotOnTopPage: ['nav_side_bar'],
+            elementsToShowWhenNotOnTopPage: [
+                {
+                    id: 'nav_side_bar_left',
+                    origin: 'top'
+                },
+                {
+                    id: 'nav_side_bar_right',
+                    origin: 'bottom'
+                }
+            ],
             sectionIds: sections,
-            currentViewedSection: 'introduction_section'
+            currentViewedSection: 'introduction_section',
+            isPageLoaded: false
         }
     },
     methods: {
@@ -39,7 +49,7 @@ export default {
                 event.preventDefault();
 
                 targetSection.scrollIntoView({ behavior: "smooth" });
-                const topOffset = targetSection.offsetTop;
+                const topOffset = targetSection.offsetTop - 50;
                 this.bIsToggleDropdown = false;
 
                 window.scrollTo({
@@ -49,16 +59,14 @@ export default {
             }
         },
         showElementsWhenNotOnTopPage() {
-            for (const elementId of this.elementsToShowWhenNotOnTopPage) {
+            for (const element of this.elementsToShowWhenNotOnTopPage) {
                 // If user scrolled
                 if (window.pageYOffset > 0) {
-                    this.$refs[elementId]?.classList.remove('translate-x-20', 'opacity-0');
-                    this.$refs[elementId]?.classList.add('translate-x-0', 'opacity-100');
-                    // this.$toggleClasses(elementId, null, 'hidden');
+                    this.$refs[element.id]?.classList.remove(element.origin === 'top' ? '-translate-y-20' : 'translate-y-20', 'opacity-0');
+                    this.$refs[element.id]?.classList.add('translate-y-0', 'opacity-100');
                 } else {
-                    // this.$toggleClasses(elementId, 'hidden');
-                    this.$refs[elementId]?.classList.add('translate-x-20', 'opacity-0');
-                    this.$refs[elementId]?.classList.remove('translate-x-0', 'opacity-100');
+                    this.$refs[element.id]?.classList.add(element.origin === 'top' ? '-translate-y-20' : 'translate-y-20', 'opacity-0');
+                    this.$refs[element.id]?.classList.remove('translate-y-0', 'opacity-100');
                 }
             }
             return;
@@ -68,7 +76,7 @@ export default {
          */
         handleNavigationBarShrink() {
             if (window.pageYOffset > 0) {
-                // Hide list
+                // Hide list                
                 this.$toggleClasses('main_nav_list', null, 'lp:flex');
                 this.$toggleClasses('main_nav_shrinked_list', 'lp:flex', 'hidden');
                 this.$toggleClasses('main_nav_shrinked_list', 'tb:hidden');
@@ -89,9 +97,9 @@ export default {
             }
         },
         getCurrentViewedSection() {
-            for (const elementId of this.sectionIds) {
-                if (this.checkIfElementIsOnViewPort(elementId)) {
-                    this.currentViewedSection = elementId;
+            for (const element of this.sectionIds) {
+                if (this.checkIfElementIsOnViewPort(element.id)) {
+                    this.currentViewedSection = element.id;
                     break;
                 }
             }

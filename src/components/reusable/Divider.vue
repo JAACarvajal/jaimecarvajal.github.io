@@ -1,6 +1,6 @@
 <template>
   <div :ref="refId" class="w-full duration-700" :class="[
-    isViewed ? setSlideAnimationClasses(refId, 150) : '',
+    isViewed ? setSlideAnimationClasses(refId, delay) : '',
     isWithAnimation ? 'translate-x-20 opacity-0' : ''
   ]">
     <hr class="mx-auto my-4 bg-theme-color border-0 rounded lp:my-10" :class="customClass" />
@@ -11,7 +11,7 @@ export default {
   /**
    * Props
    */
-  props: ["data", "isViewed", "refId", "isWithAnimation"],
+  props: ["data", "isViewed", "refId", "isWithAnimation", "delay"],
   /**
    * Component variables
    */

@@ -14,7 +14,7 @@
         <div class="flex gap-4">
           <font-awesome-icon icon="fa-brands fa-linkedin" style="color: #ffffff" size="2xl" />
           <font-awesome-icon icon="fa-brands fa-github" style="color: #ffffff" size="2xl" />
-          <font-awesome-icon icon="fa-brands fa-instagram " style="color: #ffffff" size="2xl" />
+          <font-awesome-icon icon="fa-brands fa-instagram" style="color: #ffffff" size="2xl" />
         </div>
       </div>
     </div>

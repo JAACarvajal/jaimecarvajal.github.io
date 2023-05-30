@@ -1,29 +1,44 @@
 <template>
-    <nav ref="nav_side_bar" id="nav_side_bar"
-        class="fixed justify-center w-full top-[42%] left-[94%] tb:left-[96%] lp:left-[98%] translate-x-20 opacity-0 duration-200">
-        <ul class="absolute flex flex-col gap-8">
-            <SidebarItem v-for="(sectionId, index) in sectionIds" @update-selected="(section) => updateSelected(section)"
-                :section="sectionId" :currentSelected="currentSelected" :id="index" />
+    <nav :ref="'nav_side_bar_' + sidebarPosition" :id="'nav_side_bar_' + sidebarPosition"
+        class="fixed justify-center duration-300" :class="[position[sidebarPosition]]">
+        <ul class="absolute flex flex-row items-center gap-5">
+            <!-- <div class="border-[1px] border-dark-gray w-16"></div> -->
+            <SidebarItem v-if="list === 'navigation'" v-for="(section, index) in sectionIds"
+                @update-selected="(section) => updateSelected(section)" :item="section" :currentSelected="currentSelected"
+                :id="index" :type="list" />
+            <SidebarItem v-if="list === 'socials'" v-for="(social, index) in socialsList" :item="social" :id="index"
+                :type="list" />
+            <div class="border-[1px] border-gray-400 w-[1000px]"></div>
         </ul>
     </nav>
 </template>
 <script>
 import SidebarItem from './reusable/Navigation/SidebarItem.vue';
 import { sections } from '../constants';
+import { socials } from '../constants';
 
 export default {
+    props: {
+        sidebarPosition: String,
+        list: String,
+    },
     components: {
         SidebarItem
     },
     data() {
         return {
             sectionIds: sections,
-            currentSelected: 'introduction_section'
+            socialsList: socials,
+            currentSelected: 'introduction_section',
+            position: {
+                left: 'top-[55%] left-9 -translate-y-20 opacity-0 -rotate-90',
+                right: 'bottom-[55%] right-9 translate-y-20 opacity-0 rotate-90',
+            },
         }
     },
     methods: {
         updateSelected(currentSelected) {
-            this.currentSelected = currentSelected;
+            this.currentSelected = currentSelected.id;
         }
     },
 };

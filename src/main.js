@@ -1,7 +1,8 @@
 import { createApp } from 'vue';
 import './style.css';
 import App from './App.vue';
-import helperPlugin from './plugins/helpers';
+import { createPinia } from 'pinia'
+import globalPlugin from './plugins/global';
 import scrollMixin from './mixins/scroll-mixin';
 import animationMixin from './mixins/custom-animation-mixin';
 
@@ -42,9 +43,12 @@ library.add(
     faReact
 );
 
+const pinia = createPinia();
 const app = createApp(App);
+app.use(globalPlugin, {});
+app.use(pinia);
 app.mixin(scrollMixin);
 app.mixin(animationMixin);
-app.use(helperPlugin, {});
+
 app.component('font-awesome-icon', FontAwesomeIcon);
 app.mount('#app');

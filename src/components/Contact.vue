@@ -1,20 +1,23 @@
 <template>
-    <div ref="contact_section" id="contact_section"
-        class="flex flex-col place-content-center gap-1 text-3xl mx-auto w-full h-screen py-10 px-10 lp:px-32 text-dark-gray">
-        <h1 ref="main_title"
-            class="text-center font-extrabold text-5xl lp:text-7xl leading-snug tracking-wide translate-x-20 opacity-0 duration-700"
-            :class="isViewed ? setSlideAnimationClasses('main_title', 0) : ''">
-            <span class="mobile-custom-underline lp:custom-underline">CONTACT</span>
-        </h1>
-        <Divider refId="contact_divider" :is-viewed="isViewed" :is-with-animation="true" />
-    </div>
+    <Section :sectionRefId="'contact_section'" :dividerRefId="'contact_divider'" :isViewed="isViewed"
+        :is-with-animation="true" :dividerAnimationDelay="100" containerId="contact_card" :containerAnimationDelay="0">
+        <template #title>
+            <h1 ref="main_title"
+                class="absolute -top-10 -left-30 text-center font-extrabold text-5xl lp:text-7xl leading-snug tracking-wide translate-x-20 opacity-0 duration-700"
+                :class="isViewed ? setSlideAnimationClasses('main_title', 200) : ''">
+                <span class="mobile-custom-underline lp:custom-underline">CONTACT</span>
+            </h1>
+        </template>
+        <template #content>
+        </template>
+    </Section>
 </template>
 <script>
-import Divider from "./reusable/Divider.vue";
+import Section from "./reusable/Section.vue";
 
 export default {
     components: {
-        Divider
+        Section
     },
     data() {
         return {

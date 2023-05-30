@@ -8,11 +8,12 @@
 */
 @layer utilities {
   .custom-underline {
-    @apply shadow-[inset_0_-35px_0_rgb(255,195,57)];
+    /* @apply shadow-[inset_0_-5px_0_rgb(168,85,247)]; */
+    border-image: linear-gradient(to right, rgb(168,85,247) 50%, transparent 50%) 100% 1;
   }
 
   .mobile-custom-underline {
-    @apply shadow-[inset_0_-25px_0_rgb(255,195,57)];
+    /* @apply shadow-[inset_0_-25px_0_rgb(168,85,247)]; */
   }
 
   .custom-sub-underline {
