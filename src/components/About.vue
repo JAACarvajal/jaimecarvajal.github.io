@@ -2,36 +2,29 @@
   <Section :sectionRefId="'about_section'" :dividerRefId="'about_divider'" :isViewed="isViewed" :is-with-animation="true"
     :dividerAnimationDelay="100" containerId="about_card" :containerAnimationDelay="0">
     <template #title>
-      <h1 ref="main_title"
-        class="w-full absolute -top-14 left-20 font-extrabold text-5xl lp:text-8xl leading-snug tracking-wide translate-x-20 opacity-0 duration-700"
-        :class="isViewed ? setSlideAnimationClasses('main_title', 300) : ''">
-        <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#09203F] to-[#537895]">ABOUT
-          ME</span>
-      </h1>
+      ABOUT ME
     </template>
     <template #content>
-      <div class="flex flex-col lp:flex-row gap-12">
+      <div class="flex flex-col lp:flex-row gap-12 mt-10 lp:mt-0">
         <div class="flex flex-col gap-8 lp:w-1/2">
           <h3 ref="get_to_know_title"
-            class="text-center lp:text-left font-bold text-2xl lp:text-3xl leading-snug tracking-wide translate-x-20 opacity-0 duration-700"
+            class="text-center lp:text-left font-bold text-xl lp:text-2xl leading-snug tracking-wide translate-x-20 opacity-0 duration-700"
             :class="isViewed ? setSlideAnimationClasses('get_to_know_title', 400) : ''">
             GET TO KNOW ME
           </h3>
           <div ref="get_to_know_desc" class="flex flex-col gap-4 translate-x-20 opacity-0 duration-700"
             :class="isViewed ? setSlideAnimationClasses('get_to_know_desc', 500) : ''">
-            <p class="text-base tb:text-xl">
+            <p class="text-base lp:text-lg">
+              Hello stranger! 👋 my name is Jaime Alejandro A. Carvajal II and I am a web developer responsible for
+              creating and implementing the visual and interactive elements of the internet.
+            </p>
+            <p class="text-base lp:text-lg">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta
               blanditiis consectetur commodi reiciendis doloremque ex, tenetur
               culpa. Sapiente doloribus, aut fugit perspiciatis cupiditate molestiae
               natus reprehenderit quod placeat sint officia.
             </p>
-            <p class="text-base tb:text-xl">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta
-              blanditiis consectetur commodi reiciendis doloremque ex, tenetur
-              culpa. Sapiente doloribus, aut fugit perspiciatis cupiditate molestiae
-              natus reprehenderit quod placeat sint officia.
-            </p>
-            <p class="text-base tb:text-xl">
+            <p class="text-base lp:text-lg">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta
               blanditiis consectetur commodi reiciendis doloremque ex, tenetur
               culpa. Sapiente doloribus, aut fugit perspiciatis cupiditate molestiae
@@ -41,7 +34,7 @@
         </div>
         <div class="lp:w-1/2 flex flex-col gap-8">
           <h3 ref="skills_and_tech_title"
-            class="text-center lp:text-left font-bold text-2xl lp:text-3xl leading-snug tracking-wide translate-x-20 opacity-0 duration-700"
+            class="text-center lp:text-left font-bold text-xl lp:text-2xl leading-snug tracking-wide translate-x-20 opacity-0 duration-700"
             :class="isViewed ? setSlideAnimationClasses('skills_and_tech_title', 600) : ''">
             SKILLS & TECHNOLOGIES
           </h3>

@@ -1,5 +1,5 @@
 <template>
-  <div class="h-screen relative">
+  <div id="main_app_container" class="h-screen relative">
     <Navigation />
     <Sidebar sidebar-position="right" list="navigation" />
     <Sidebar sidebar-position="left" list="socials" />

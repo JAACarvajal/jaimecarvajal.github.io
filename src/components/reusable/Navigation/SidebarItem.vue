@@ -7,7 +7,7 @@
     </a>
 
     <a v-if="type === 'socials'" href="#" class="text-center text-sm duration-400">
-        <font-awesome-icon :icon="item.icon_class" size="xl" />
+        <font-awesome-icon :icon="item.icon_class" size="lg" />
     </a>
 </template>
 <script>

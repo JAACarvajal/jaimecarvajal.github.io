@@ -1,6 +1,6 @@
 <template>
     <nav :ref="'nav_side_bar_' + sidebarPosition" :id="'nav_side_bar_' + sidebarPosition"
-        class="fixed justify-center duration-300" :class="[position[sidebarPosition]]">
+        class="fixed justify-center duration-300 z-50" :class="[position[sidebarPosition]]">
         <ul class="absolute flex flex-row items-center gap-5">
             <!-- <div class="border-[1px] border-dark-gray w-16"></div> -->
             <SidebarItem v-if="list === 'navigation'" v-for="(section, index) in sectionIds"
@@ -8,7 +8,7 @@
                 :id="index" :type="list" />
             <SidebarItem v-if="list === 'socials'" v-for="(social, index) in socialsList" :item="social" :id="index"
                 :type="list" />
-            <div class="border-[1px] border-gray-400 w-[1000px]"></div>
+            <div class="border-[1px] border-dark-gray w-[1000px]"></div>
         </ul>
     </nav>
 </template>
@@ -31,8 +31,8 @@ export default {
             socialsList: socials,
             currentSelected: 'introduction_section',
             position: {
-                left: 'top-[55%] left-9 -translate-y-20 opacity-0 -rotate-90',
-                right: 'bottom-[55%] right-9 translate-y-20 opacity-0 rotate-90',
+                left: 'hidden lp:block top-[55%] lp:left-3 pc:left-9 -translate-y-20 opacity-0 -rotate-90',
+                right: 'hidden lp:block bottom-[55%] lp:right-3 pc:right-9 translate-y-20 opacity-0 rotate-90',
             },
         }
     },

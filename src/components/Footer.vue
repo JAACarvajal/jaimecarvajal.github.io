@@ -1,28 +1,7 @@
 <template>
-  <div class="flex flex-col place-content-between mx-auto w-full h-auto lp:h-2/5 bg-black px-8 lp:px-40 lp:pt-20 py-8">
-    <div class="flex flex-col justify-between lp:flex-row items-center text-white gap-10">
-      <div class="flex flex-col w-60 gap-3">
-        <h3 class="text-xl font-bold leading-snug tracking-wide text-theme-color lp:text-2xl text-center lp:text-left">
-          JAIME CARVAJAL
-        </h3>
-        <p class="text-center lp:text-left">jaacarvajal27@gmail.com</p>
-      </div>
-      <div class="flex flex-col w-30 gap-4">
-        <h3 class="text-xl lp:text-2xl font-bold leading-snug tracking-wide text-theme-color text-center lp:text-left">
-          SOCIALS
-        </h3>
-        <div class="flex gap-4">
-          <font-awesome-icon icon="fa-brands fa-linkedin" style="color: #ffffff" size="2xl" />
-          <font-awesome-icon icon="fa-brands fa-github" style="color: #ffffff" size="2xl" />
-          <font-awesome-icon icon="fa-brands fa-instagram" style="color: #ffffff" size="2xl" />
-        </div>
-      </div>
-    </div>
-    <div class="w-full py-2">
-      <Divider :data="{
-        customClass: 'w-full h-px',
-      }" />
-      <p class="text-white text-center text-xs">
+  <div class="flex flex-col place-content-end mx-auto w-full h-auto pb-4">
+    <div class="w-full py-2 mt-2 px-20 pb-0 tb:px-56">
+      <p class="text-dark-gray text-center text-xs">
         © Copyright 2023. Made by Jaime Carvajal
       </p>
     </div>

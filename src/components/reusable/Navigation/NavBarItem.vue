@@ -1,10 +1,10 @@
 <template>
-    <a v-if="!isMobile" class="text-base hover:lp:custom-extra-sm-sub-underline hover:duration-200" href="#"
+    <a v-if="!isMobile" class="text-base duration-700 translate-y-0 hover:-translate-y-1 hover:duration-300" href="#"
         @click="scrollToSection($event, section)">
         {{ text }}
     </a>
-    <a v-else class="text-right px-4 border-b-[1px] w-full py-4 hover:bg-violet-500 hover:text-whitel duration-200" href="#"
-        @click="scrollToSection($event, section)">
+    <a v-else class="text-center px-4 w-full py-4 duration-200 border-l" href="#"
+        @click="[scrollToSection($event, section), $emit('close-mobile-nav')]">
         {{ text }}
     </a>
 </template>

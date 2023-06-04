@@ -51,10 +51,6 @@ export const sections = [
     {
         id: 'project_section',
         title: 'WORK'
-    },
-    {
-        id: 'contact_section',
-        title: 'CONTACT'
     }
 ];
 

@@ -1,9 +1,9 @@
 <template>
-  <div :ref="refId" class="w-full duration-700" :class="[
+  <div :ref="refId" class="flex justify-center w-full duration-700 h-4" :class="[
     isViewed ? setSlideAnimationClasses(refId, delay) : '',
     isWithAnimation ? 'translate-x-20 opacity-0' : ''
   ]">
-    <hr class="mx-auto my-4 bg-theme-color border-0 rounded lp:my-10" :class="customClass" />
+    <hr class="mx-auto bg-dark-gray border-0 rounded lp:my-10" :class="customClass" />
   </div>
 </template>
 <script>

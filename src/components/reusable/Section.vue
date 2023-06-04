@@ -1,11 +1,17 @@
 <template>
     <div :ref="sectionRefId" :id="sectionRefId"
-        class="flex flex-col place-content-center gap-1 text-3xl mx-auto w-full h-auto lp:h-screen py-10 px-10 tb:px-48 lp:px-36 pc:px-60 text-dark-gray"
+        class="flex flex-col place-content-center gap-1 text-3xl mx-auto pb-5 px-5 tb:w-11/12 lp:w-3/4 h-auto lp:h-screen text-dark-gray my-1 duration-1000 translate-y-0 hover:-translate-y-5 hover:duration-300"
         :class="bgColorList[bgColor]">
         <div :ref="containerId"
-            class="relative bg-gradient-to-l from-light-gray p-20 rounded-3xl shadow-md -translate-y-40 opacity-0 duration-700"
+            class="relative bg-gradient-to-l from-light-gray py-10 tb:py-20 px-5 tb:px-10 border-2 lp:border-t-0 rounded-3xl shadow-lg -translate-y-40 opacity-0 duration-700"
             :class="isViewed ? setSlideAnimationClasses(containerId, containerAnimationDelay, true) : ''">
-            <slot name="title"></slot>
+            <h1 ref="main_title"
+                class="text-center lp:text-left w-full lp:absolute lp:top-[-35px] pc:top-[-50px] left-30 font-extrabold text-5xl tb:text-6xl lp:text-7xl pc:text-8xl leading-snug tracking-wide translate-x-20 opacity-0 duration-700"
+                :class="isViewed ? setSlideAnimationClasses('main_title', 300) : ''">
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#09203F] to-[#537895]">
+                    <slot name="title"></slot>
+                </span>
+            </h1>
             <!-- Divider -->
             <!-- <Divider :refId="dividerRefId" :is-viewed="isViewed" :is-with-animation="isWithAnimation"
                 :delay="dividerAnimationDelay" /> -->
