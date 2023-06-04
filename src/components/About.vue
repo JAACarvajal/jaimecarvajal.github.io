@@ -18,18 +18,6 @@
               Hello stranger! 👋 my name is Jaime Alejandro A. Carvajal II and I am a web developer responsible for
               creating and implementing the visual and interactive elements of the internet.
             </p>
-            <p class="text-base lp:text-lg">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta
-              blanditiis consectetur commodi reiciendis doloremque ex, tenetur
-              culpa. Sapiente doloribus, aut fugit perspiciatis cupiditate molestiae
-              natus reprehenderit quod placeat sint officia.
-            </p>
-            <p class="text-base lp:text-lg">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta
-              blanditiis consectetur commodi reiciendis doloremque ex, tenetur
-              culpa. Sapiente doloribus, aut fugit perspiciatis cupiditate molestiae
-              natus reprehenderit quod placeat sint officia.
-            </p>
           </div>
         </div>
         <div class="lp:w-1/2 flex flex-col gap-8">
