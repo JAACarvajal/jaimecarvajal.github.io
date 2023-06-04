@@ -7,8 +7,6 @@
         <NavBarItem @close-mobile-nav="$emit('close-mobile-nav')" section="about_section" text="ABOUT" :isMobile="true" />
         <NavBarItem @close-mobile-nav="$emit('close-mobile-nav')" section="project_section" text="PROJECTS"
             :isMobile="true" />
-        <NavBarItem @close-mobile-nav="$emit('close-mobile-nav')" section="project_section" text="CONTACT"
-            :isMobile="true" />
     </ul>
 </template>
 <script>
