@@ -14,7 +14,7 @@
           </h3>
           <div ref="get_to_know_desc" class="flex flex-col gap-4 translate-x-20 opacity-0 duration-700"
             :class="isViewed ? setSlideAnimationClasses('get_to_know_desc', 500) : ''">
-            <p class="text-base lp:text-lg">
+            <p class="text-base lp:text-lg text-center tb:text-left">
               Hello stranger! 👋 my name is Jaime Alejandro A. Carvajal II and I am a web developer responsible for
               creating and implementing the visual and interactive elements of the internet.
             </p>

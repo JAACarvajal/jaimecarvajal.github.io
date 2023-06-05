@@ -7,7 +7,7 @@
             :class="isViewed ? setSlideAnimationClasses('get_to_know_title', 400) : ''">
             {{ projectData.name }}
         </h3>
-        <p class="text-base lp:text-lg">{{ projectData.description }}</p>
+        <p class="text-base text-center tb:text-left lp:text-lg">{{ projectData.description }}</p>
     </div>
 </template>
 <script>

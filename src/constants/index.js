@@ -35,7 +35,7 @@ export const projects = [
         ref: 'expert',
         animation_delay: 400,
         image_file_name: 'experts_cafe24_laptop.png',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta blanditiis consectetur commodi reiciendis doloremque ex, tenetur culpa. Sapiente doloribus, aut fugit perspiciatis cupiditate molestiae natus reprehenderit quod placeat sint officia.'
+        description: 'Experts is a web application designed to facilitate client engagement with skilled professionals or potential partners capable of fulfilling specific tasks, projects, or requests.'
     }
 ];
 
@@ -56,18 +56,18 @@ export const sections = [
 
 export const socials = [
     {
-        url: '',
+        url: 'https://www.linkedin.com/in/jaacarvajal27',
         icon_class: 'fa-brands fa-linkedin',
         id: 'linkedin_icon'
     },
     {
-        url: '',
+        url: 'https://github.com/JAACarvajal',
         icon_class: 'fa-brands fa-github',
-        id: 'linkedin_icon'
+        id: 'github_icon'
     },
     {
-        url: '',
+        url: 'https://www.instagram.com/jamesssxus',
         icon_class: 'fa-brands fa-instagram',
-        id: 'linkedin_icon'
+        id: 'instagram_icon'
     }
 ];

@@ -49,7 +49,7 @@ export default {
                 event.preventDefault();
 
                 targetSection.scrollIntoView({ behavior: "smooth" });
-                const topOffset = targetSection.offsetTop;
+                const topOffset = targetSection.offsetTop - 100;
                 this.bIsToggleDropdown = false;
 
                 window.scrollTo({

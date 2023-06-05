@@ -25,16 +25,21 @@
           srcset="" :class="isViewed ? setSlideAnimationClasses('introduction_logo', 1200) : ''" /> -->
       </div>
       <div class="px-5 tb:px-0 absolute flex justify-between items-center bottom-5 w-full">
-        <div class="flex gap-4 translate-x-20 opacity-0 duration-700 w-40" ref="introduction_socials"
+        <div class="hidden tb:flex gap-4 translate-x-20 opacity-0 duration-700 w-40" ref="introduction_socials"
           id="introduction_socials" :class="isViewed ? setSlideAnimationClasses('introduction_socials', 700) : ''">
-          <font-awesome-icon icon="fa-brands fa-linkedin" size="2xs" />
-          <font-awesome-icon icon="fa-brands fa-github" size="2xs" />
-          <font-awesome-icon icon="fa-brands fa-instagram" size="2xs" />
+          <a v-for="(social, index) in socialsList" target="_blank" :href="social.url" :id="index" rel="noreferrer">
+            <font-awesome-icon :icon="social.icon_class" size="2xs" />
+          </a>
         </div>
-        <font-awesome-icon class="-translate-x-1/2 translate-y-[80%] animate-bounce hover:cursor-pointer"
-          icon="fa-solid fa-angle-down" @click="scrollToSection($event, 'about_section')" />
-        <p ref="introduction_email" class="text-sm translate-x-20 opacity-0 duration-700 w-40"
-          :class="isViewed ? setSlideAnimationClasses('introduction_email', 900) : ''">
+
+        <div ref="introduction_arrow" class="w-full text-center tb:w-auto translate-x-20 opacity-0 duration-700"
+          :class="isViewed ? setSlideAnimationClasses('introduction_arrow', 900) : ''">
+          <font-awesome-icon class="-translate-x-1/2 translate-y-[80%] animate-bounce hover:cursor-pointer"
+            icon="fa-solid fa-angle-down" @click="scrollToSection($event, 'about_section')" />
+        </div>
+
+        <p ref="introduction_email" class="hidden tb:block text-sm translate-x-20 opacity-0 duration-700 w-40"
+          :class="isViewed ? setSlideAnimationClasses('introduction_email', 1100) : ''">
           jaacarvajal27@gmail.com</p>
       </div>
     </div>
@@ -42,11 +47,14 @@
 </template>
 <script>
 import Divider from './reusable/Divider.vue';
+import { socials } from '../constants';
+
 export default {
   components: { Divider },
   data() {
     return {
-      isViewed: true
+      isViewed: true,
+      socialsList: socials,
     }
   },
   watch: {
