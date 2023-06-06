@@ -1,5 +1,5 @@
 <template>
-  <div ref="introduction_section" id="introduction_section" class="text-3xl mx-auto tb:w-11/12 lp:w-3/4 h-screen">
+  <div ref="introduction_section" id="introduction_section" class="text-3xl mx-auto tb:w-11/12 lp:w-3/4 h-screen mb-40">
     <div class="relative flex flex-col place-content-center justify-center w-full h-full gap-8">
       <div ref="introduction_card" class="relative flex flex-col justify-between place-content-center gap-4 py-20 px-10">
         <h1 id="pre_introduction_title" ref="pre_introduction_title"
@@ -14,15 +14,6 @@
           <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#09203F] to-[#537895]">
             JAIME CARVAJAL</span>
         </h1>
-        <!-- 
-        <h3 ref="introduction_sub"
-          class="mx-auto text-center text-dark-gray text-base lp:text-2xl font-semibold translate-x-20 opacity-0 duration-700 w-1/2"
-          :class="isViewed ? setSlideAnimationClasses('introduction_sub', 1000) : ''">
-          Web Developer
-        </h3> -->
-        <!-- <img ref="introduction_logo" id="introduction_logo"
-          class="w-36 h-36 right-20 translate-x-20 opacity-0 duration-700" src="/images/logo.png" alt="portfolio logo"
-          srcset="" :class="isViewed ? setSlideAnimationClasses('introduction_logo', 1200) : ''" /> -->
       </div>
       <div class="px-5 tb:px-0 absolute flex justify-between items-center bottom-5 w-full">
         <div class="hidden tb:flex gap-4 translate-x-20 opacity-0 duration-700 w-40" ref="introduction_socials"

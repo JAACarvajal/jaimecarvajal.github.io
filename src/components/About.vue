@@ -8,21 +8,34 @@
       <div class="flex flex-col lp:flex-row gap-12 mt-10 lp:mt-0">
         <div class="flex flex-col gap-8 lp:w-1/2">
           <h3 ref="get_to_know_title"
-            class="text-center lp:text-left font-bold text-xl lp:text-2xl leading-snug tracking-wide translate-x-20 opacity-0 duration-700"
+            class="text-center lp:text-left font-bold text-xl lp:text-2xl tracking-tighte translate-x-20 opacity-0 duration-700"
             :class="isViewed ? setSlideAnimationClasses('get_to_know_title', 400) : ''">
             GET TO KNOW ME
           </h3>
           <div ref="get_to_know_desc" class="flex flex-col gap-4 translate-x-20 opacity-0 duration-700"
             :class="isViewed ? setSlideAnimationClasses('get_to_know_desc', 500) : ''">
             <p class="text-base lp:text-lg text-center tb:text-left">
-              Hello stranger! 👋 my name is Jaime Alejandro A. Carvajal II and I am a web developer responsible for
+              Hello stranger! Welcome to my portfolio, where I showcase my diverse range of skills and experiences.
+            </p>
+            <p class="text-base lp:text-lg text-center tb:text-left">
+              My name is Jaime Alejandro A. Carvajal II and I am a web developer responsible for
               creating and implementing the visual and interactive elements of the internet.
+            </p>
+            <p class="text-base lp:text-lg text-center tb:text-left">
+              My name is Jaime Alejandro A. Carvajal II and I am a web developer responsible for
+              creating and implementing the visual and interactive elements of the internet.
+            </p>
+            <p class="text-base lp:text-lg text-center tb:text-left">
+              I have always had a deep fascination for web development. Over the years, I have honed my craft and
+              developed expertise in frontend frameworks and tools. Throughout my professional journey, I have
+              consistently showcased my proficiency in accurately and skillfully transforming designs into functional
+              code.
             </p>
           </div>
         </div>
         <div class="lp:w-1/2 flex flex-col gap-8">
           <h3 ref="skills_and_tech_title"
-            class="text-center lp:text-left font-bold text-xl lp:text-2xl leading-snug tracking-wide translate-x-20 opacity-0 duration-700"
+            class="text-center lp:text-left font-bold text-xl lp:text-2xl tracking-tight translate-x-20 opacity-0 duration-700"
             :class="isViewed ? setSlideAnimationClasses('skills_and_tech_title', 600) : ''">
             SKILLS & TECHNOLOGIES
           </h3>

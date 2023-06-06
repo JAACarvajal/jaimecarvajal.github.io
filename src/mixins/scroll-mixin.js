@@ -49,7 +49,7 @@ export default {
                 event.preventDefault();
 
                 targetSection.scrollIntoView({ behavior: "smooth" });
-                const topOffset = targetSection.offsetTop - 100;
+                const topOffset = targetSection.offsetTop - 110;
                 this.bIsToggleDropdown = false;
 
                 window.scrollTo({
@@ -113,6 +113,9 @@ export default {
                 rect.bottom <= (rect.height + (rect.height * .50)) // Set this higher
             );
         },
+        scrollToTopPage() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        },
         /**
          * Handle scroll event
          * @param {*} event
@@ -121,7 +124,6 @@ export default {
             this.getCurrentViewedSection();
             this.handleNavigationBarShrink();
             this.showElementsWhenNotOnTopPage();
-            console.log(this.currentViewedSection);
             event.preventDefault();
         },
     },

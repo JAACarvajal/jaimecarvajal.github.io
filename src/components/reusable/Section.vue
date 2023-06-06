@@ -1,6 +1,6 @@
 <template>
     <div :ref="sectionRefId" :id="sectionRefId"
-        class="flex flex-col place-content-center gap-1 text-3xl mx-auto pb-5 px-5 tb:w-11/12 lp:w-3/4 h-auto lp:h-screen text-dark-gray mt-10 lp:mt-0">
+        class="flex flex-col place-content-center gap-1 text-3xl mx-auto px-5 tb:w-11/12 lp:w-3/4 h-auto text-dark-gray min-h-screen">
         <div :ref="containerId"
             class="relative bg-gradient-to-l from-light-gray py-10 tb:py-20 px-5 tb:px-10 border-2 lp:border-t-0 rounded-3xl shadow-lg -translate-y-40 opacity-0 duration-1000 hover:-translate-y-4 hover:duration-300"
             :class="isViewed ? setSlideAnimationClasses(containerId, containerAnimationDelay, true) : ''">

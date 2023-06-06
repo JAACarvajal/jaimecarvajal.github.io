@@ -26,9 +26,14 @@
             class="flex lp:hidden desktop:hidden justify-center items-center h-full px-1 gap-8 text-base font-semibold text-dark-gray">
             <SwitchModeButton />
           </ul>
-          <div class="w-5">
-            <font-awesome-icon class="block lp:hidden text-2xl cursor-pointer"
-              :icon="bIsToggleDropdown ? 'fa-solid fa-xmark' : 'fa-solid fa-bars'" @click="toggleDropdown" />
+          <div class="w-6">
+            <div class="group hover:cursor-pointer" ref="hamburger_icon" id="hamburger_icon" @click="toggleDropdown">
+              <div class="h-1 w-6 my-1 rounded-full bg-black transition ease transform duration-300"></div>
+              <div class="h-1 w-6 my-1 rounded-full bg-black transition ease transform duration-300"></div>
+              <div class="h-1 w-6 my-1 rounded-full bg-black transition ease transform duration-300"></div>
+            </div>
+            <!-- <font-awesome-icon class="block lp:hidden text-2xl cursor-pointer"
+              :icon="bIsToggleDropdown ? 'fa-solid fa-xmark' : 'fa-solid fa-bars'" @click="toggleDropdown" /> -->
           </div>
 
         </div>
@@ -61,6 +66,7 @@ export default {
      */
     toggleDropdown() {
       this.bIsToggleDropdown = !this.bIsToggleDropdown;
+      this.transformHamburger();
       if (this.bIsToggleDropdown) {
         this.$toggleClasses('nav_cont', 'h-40', 'h-20');
         this.$toggleClasses('nav_cont', 'h-40', 'h-20');
@@ -69,8 +75,26 @@ export default {
       this.$toggleClasses('nav_cont', 'h-20', 'h-40');
     },
     closeMobileNav() {
-      this.$toggleClasses('nav_cont', 'h-20', 'h-40');
+      const hamburgerElement = this.$refs['hamburger_icon'];
+
       this.bIsToggleDropdown = false;
+      this.$toggleClasses('nav_cont', 'h-20', 'h-40');
+
+      hamburgerElement.childNodes[0].classList.remove('rotate-45', 'translate-y-2');
+      hamburgerElement.childNodes[1].classList.remove('opacity-0');
+      hamburgerElement.childNodes[hamburgerElement.childNodes.length - 1].classList.remove('-rotate-45', '-translate-y-2');
+    },
+    transformHamburger() {
+      const hamburgerElement = this.$refs['hamburger_icon'];
+
+      if (this.bIsToggleDropdown) {
+        hamburgerElement.childNodes[0].classList.add('rotate-45', 'translate-y-2');
+        hamburgerElement.childNodes[1].classList.add('opacity-0');
+        hamburgerElement.childNodes[hamburgerElement.childNodes.length - 1].classList.add('-rotate-45', '-translate-y-2');
+        return;
+      }
+
+      this.closeMobileNav();
     }
   }
 };

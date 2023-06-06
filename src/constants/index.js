@@ -31,8 +31,9 @@ export const skills = [
 
 export const projects = [
     {
-        name: 'EXPERT',
+        name: 'EXPERTS',
         ref: 'expert',
+        url: 'https://experts.cafe24.com/client',
         animation_delay: 400,
         image_file_name: 'experts_cafe24_laptop.png',
         description: 'Experts is a web application designed to facilitate client engagement with skilled professionals or potential partners capable of fulfilling specific tasks, projects, or requests.'

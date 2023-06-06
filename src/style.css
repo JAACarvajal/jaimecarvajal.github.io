@@ -7,28 +7,21 @@
 * Additional custom utility classes
 */
 @layer utilities {
-  .custom-underline {
-    /* @apply shadow-[inset_0_-5px_0_rgb(168,85,247)]; */
-    border-image: linear-gradient(to right, rgb(168,85,247) 50%, transparent 50%) 100% 1;
+  .hover-underline-animation:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #323232;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
   }
-
-  .mobile-custom-underline {
-    /* @apply shadow-[inset_0_-25px_0_rgb(168,85,247)]; */
+  
+  .hover-underline-animation:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
   }
-
-  .custom-sub-underline {
-    @apply shadow-[inset_0_-16px_0_rgb(168,85,247)];
-  }
-
-  .mobile-custom-sub-underline {
-    @apply shadow-[inset_0_-13px_0_rgb(168,85,247)];
-  }
-
-  .custom-extra-sm-sub-underline {
-    @apply shadow-[inset_0_-12px_0_rgb(168,85,247)];
-  }
-
-  /* .fa-brands {
-    font-size: 4em !important;
-  } */
 }
