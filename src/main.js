@@ -14,13 +14,14 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
 /* import specific icons */
-import { faUserSecret, faUser, faLaptopCode, faMoon, faAngleDown, faAngleUp } from '@fortawesome/free-solid-svg-icons';
-import { faLinkedin, faGithub, faInstagram, faVuejs, faHtml5, faCss3, faPhp, faLaravel, faJs, faReact, faFacebook, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faUserSecret, faUser, faLaptopCode, faMoon, faAngleDown, faAngleUp, faSun } from '@fortawesome/free-solid-svg-icons';
+import { faLinkedin, faGithub, faInstagram, faVuejs, faHtml5, faCss3, faPhp, faLaravel, faJs, faReact } from '@fortawesome/free-brands-svg-icons';
 
 /* add icons to the library */
 library.add(
     faUserSecret,
     faMoon,
+    faSun,
     faAngleDown,
     faAngleUp,
     faLaptopCode,

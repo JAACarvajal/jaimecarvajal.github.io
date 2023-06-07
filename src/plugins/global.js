@@ -34,21 +34,24 @@ export default {
     app.config.globalProperties.$getDevice = () => {
       const pageWidth = window.innerWidth;
       if (pageWidth <= 639) {
-        return 'mobile'
+        return 'mobile';
       }
 
 
       if (pageWidth >= 640 && pageWidth <= 1023) {
-        return 'tablet'
+        return 'tablet';
       }
 
       if (pageWidth >= 1024 && pageWidth <= 1279) {
-        return 'laptop'
+        return 'laptop';
       }
 
       if (pageWidth >= 1280) {
-        return 'pc'
+        return 'pc';
       }
+    },
+    app.config.globalProperties.$toggleDarkMode = () => {
+      document.querySelector('html').classList.toggle('dark');
     }
   }
 }

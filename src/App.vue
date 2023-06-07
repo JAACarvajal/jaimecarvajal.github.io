@@ -1,5 +1,5 @@
 <template>
-  <div id="main_app_container" class="relative">
+  <div id="main_app_container" class="relative duration-700 dark:bg-dark-mode-black">
     <Navigation />
     <Sidebar sidebar-position="right" list="navigation" />
     <Sidebar sidebar-position="left" list="socials" />

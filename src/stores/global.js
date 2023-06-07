@@ -2,13 +2,19 @@ import { defineStore } from 'pinia'
 
 export const useGlobalStore = defineStore('global', {
   state: () => {
-    return { isPageLoaded: false }
+    return { 
+      isPageLoaded: false,
+      isDarkMode: false
+    }
   },
-  // could also be defined as
-  // state: () => ({ count: 0 })
+  getters: {
+    isDarkModeEnabled(state) {
+      return state.isDarkMode;
+    }
+  },
   actions: {
-    setPageLoaded() {
-      this.isPageLoaded = true
+    toggleDarkMode() {
+      this.isDarkMode = !this.isDarkMode
     },
   },
 })

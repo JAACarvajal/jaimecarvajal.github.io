@@ -3,9 +3,13 @@
     :is-with-animation="true" :dividerAnimationDelay="100" containerId="project_card" :containerAnimationDelay="0">
     <template #title>
       WORK
+      <!-- <span class="text-white">🧑🏽‍💻</span> -->
+    </template>
+    <template #icon>
+      💻
     </template>
     <template #content>
-      <div class="flex flex-col gap-4 tb:gap-16 lp:gap-24 mt-10">
+      <div class="flex flex-col gap-10 tb:gap-16 lp:gap-24 mt-10">
         <div class="flex flex-col lp:flex-row gap-1 lp:gap-8" v-for="(project, index) in projectsList">
           <Project :projectData="project" :isViewed="isViewed" :index="index" />
         </div>
