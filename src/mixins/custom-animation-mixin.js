@@ -6,6 +6,13 @@ export default {
    * 
    */
   methods: {
+    /**
+     * Set slide animation on elements
+     * @param {*} reference 
+     * @param {*} delay 
+     * @param {*} isVertical 
+     * @param {*} callback 
+     */
     setSlideAnimationClasses(reference, delay = 500, isVertical = false, callback = null) {
       this.$nextTick(() => {
         const element = this.$refs[reference] instanceof HTMLElement ? this.$refs[reference] : this.$refs[reference][0];

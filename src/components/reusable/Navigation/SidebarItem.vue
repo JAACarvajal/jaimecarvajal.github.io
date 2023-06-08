@@ -1,8 +1,6 @@
 <template>
     <a v-if="type === 'navigation'" href="#" class="text-center text-sm duration-400" :class="isSelected ? 'font-bold' : ''"
         @click="[scrollToSection($event, item.id)]">
-        <!-- <font-awesome-icon v-if="isSelected" icon='fa-solid fa-circle' style="font-size: 13px; color: #323232;" />
-        <font-awesome-icon v-else icon='fa-regular fa-circle' style="font-size: 10px; color: #323232;" /> -->
         {{ item.title }}
     </a>
 
@@ -18,14 +16,22 @@ export default {
         currentSelected: String,
     },
     data() {
-        return {
-            isSelected: false,
-        }
+        return { isSelected: false }
     },
     watch: {
+        /**
+         * Watch for changes in currentSelected
+         * @param {*} newValue 
+         * @param {*} oldValue 
+         */
         currentSelected(newValue, oldValue) {
             this.isSelected = this.item.id !== newValue ? false : true;
         },
+        /**
+         * Watch for changes in currentViewedSection
+         * @param {*} newValue 
+         * @param {*} oldValue 
+         */
         currentViewedSection(newValue, oldValue) {
             this.isSelected = this.item.id !== newValue ? false : true;
         }

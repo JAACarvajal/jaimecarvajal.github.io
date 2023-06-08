@@ -82,7 +82,7 @@ export default {
                 this.$toggleClasses('main_nav_shrinked_list', 'tb:hidden');
                 this.$toggleClasses('main_nav_shrinked_list', 'hidden');
                 // Shrink container
-                this.$toggleClasses('nav_cont', 'lp:h-16', 'lp:h-28');
+                this.$toggleClasses('main_nav', 'lp:h-16', 'lp:h-28');
                 // Shrink logo 
                 this.$toggleClasses('nav_logo', 'lp:w-12', 'lp:w-24');
                 this.$toggleClasses('nav_logo', 'lp:h-12', 'lp:h-24');
@@ -90,7 +90,7 @@ export default {
                 this.$toggleClasses('main_nav_list', 'lp:flex', null);
                 this.$toggleClasses('main_nav_shrinked_list', 'hidden', 'lp:flex');
 
-                this.$toggleClasses('nav_cont', 'lp:h-28', 'lp:h-16');
+                this.$toggleClasses('main_nav', 'lp:h-28', 'lp:h-16');
 
                 this.$toggleClasses('nav_logo', 'lp:w-24', 'lp:w-12');
                 this.$toggleClasses('nav_logo', 'lp:h-24', 'lp:h-12');

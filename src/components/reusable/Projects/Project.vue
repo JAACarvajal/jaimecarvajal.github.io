@@ -27,9 +27,7 @@ export default {
         index: Number
     },
     data() {
-        return {
-            device: this.$getDevice()
-        }
+        return { device: this.$getDevice() }
     }
 };
 </script>

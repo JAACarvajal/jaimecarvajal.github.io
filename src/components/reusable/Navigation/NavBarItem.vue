@@ -3,10 +3,12 @@
         @click="scrollToSection($event, section)">
         {{ text }}
     </a>
-    <a v-else class="text-center px-4 w-full py-4 duration-200" :class="[
-        isFirst ? 'border-0' : 'border-l'
+
+    <a v-else class="flex justify-between w-full px-5 py-5 duration-200 dark:border-dark-mode-border" :class="[
+        isFirst ? 'border-0' : 'border-t'
     ]" href="#" @click="[scrollToSection($event, section), $emit('close-mobile-nav')]">
         {{ text }}
+        <span>{{ icon }}</span>
     </a>
 </template>
 <script>
@@ -15,7 +17,8 @@ export default {
         section: String,
         text: String,
         isMobile: Boolean,
-        isFirst: Boolean
+        isFirst: Boolean,
+        icon: String,
     }
 };
 </script>

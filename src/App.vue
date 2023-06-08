@@ -17,6 +17,7 @@ import Introduction from "./components/Introduction.vue";
 import About from "./components/About.vue";
 import Projects from "./components/Projects.vue";
 import Footer from "./components/Footer.vue";
+
 export default {
   components: {
     Navigation,

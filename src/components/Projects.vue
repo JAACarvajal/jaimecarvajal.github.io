@@ -1,13 +1,12 @@
 <template>
-  <Section :sectionRefId="'project_section'" :dividerRefId="'project_divider'" :isViewed="isViewed"
-    :is-with-animation="true" :dividerAnimationDelay="100" containerId="project_card" :containerAnimationDelay="0">
+  <Section :sectionRefId="'project_section'" :isViewed="isViewed" containerId="project_card" :containerAnimationDelay="0">
+
+    <!-- Title SLOT -->
     <template #title>
       WORK
-      <!-- <span class="text-white">🧑🏽‍💻</span> -->
     </template>
-    <template #icon>
-      💻
-    </template>
+
+    <!-- content SLOT -->
     <template #content>
       <div class="flex flex-col gap-10 tb:gap-16 lp:gap-24 mt-10">
         <div class="flex flex-col lp:flex-row gap-1 lp:gap-8" v-for="(project, index) in projectsList">
@@ -34,6 +33,11 @@ export default {
     }
   },
   watch: {
+    /**
+     * Watch changes on currentViewedSection
+     * @param {} newValue 
+     * @param {*} oldValue 
+     */
     currentViewedSection(newValue, oldValue) {
       this.isViewed = newValue === 'project_section';
     }

@@ -1,49 +1,51 @@
 <template>
-  <Section :sectionRefId="'about_section'" :dividerRefId="'about_divider'" :isViewed="isViewed" :is-with-animation="true"
-    :dividerAnimationDelay="100" containerId="about_card" :containerAnimationDelay="0">
+  <Section :sectionRefId="'about_section'" :isViewed="isViewed" containerId="about_card" :containerAnimationDelay="0">
+
+    <!-- Title SLOT -->
     <template #title>
       ABOUT
     </template>
+
+    <!-- content SLOT -->
     <template #content>
       <div class="flex flex-col lp:flex-row gap-16 mt-10 lp:mt-0">
-        <div class="flex flex-col gap-4 tb:gap-8 lp:w-1/2">
+
+        <!-- Get to know me section -->
+        <div class="flex flex-col lp:w-1/2 gap-4 tb:gap-8">
+
+          <!-- Section title -->
           <h3 ref="get_to_know_title"
-            class="text-center lp:text-left font-bold text-xl lp:text-3xl tracking-tight translate-x-20 opacity-0 duration-700"
+            class="text-center lp:text-left font-bold text-xl tb:text-2xl lp:text-3xl tracking-tight opacity-0 translate-x-20 duration-700"
             :class="isViewed ? setSlideAnimationClasses('get_to_know_title', 400) : ''">
-            😎 GET TO KNOW ME
+            GET TO KNOW ME 😎
           </h3>
-          <div ref="get_to_know_desc" class="flex flex-col gap-4 translate-x-20 opacity-0 duration-700 leading-[px]"
+
+          <!-- Descriptions -->
+          <div ref="get_to_know_desc" class="flex flex-col gap-4 leading-[px] opacity-0 translate-x-20 duration-700 "
             :class="isViewed ? setSlideAnimationClasses('get_to_know_desc', 500) : ''">
-            <p class="text-sm tb:text-base lp:text-lg">
-              Hello stranger! 👋🏾 Welcome to my portfolio, where I showcase my diverse range of skills and experiences.
+
+            <p v-for="(description, index) in descriptions" :key="index" class="text-base lp:text-lg">
+              {{ description }}
             </p>
-            <p class="text-sm tb:text-base lp:text-lg">
-              I am a web developer responsible for creating and implementing the visual and interactive elements of the
-              internet.
-            </p>
-            <p class="text-sm tb:text-base lp:text-lg">
-              I have always had a deep fascination for web development. Over the years, I have honed my craft and
-              developed expertise in frontend frameworks and tools. Throughout my professional journey, I have
-              consistently showcased my proficiency in accurately and skillfully transforming designs into functional
-              code.
-            </p>
-            <a href="/resume_06072023.pdf" target="_blank"
-              class="hidden lp:block tb:mx-auto mt-5 lp:m-0 lp:mt-2 text-center lp:text-left w-full lp:w-max">
-              <button type="button"
-                class="group bg-gradient-to-r from-[#09203F] to-[#537895] dark:from-[#4568dc] dark:to-[#b06ab3] rounded-2xl w-full h-[48px] tb:h-[56px] lp:w-56 lp:h-[70px] bg-white text-xs tb:text-sm lp:text-lg text-white font-medium uppercase leading-normal tracking-wider duration-1000 translate-y-0 hover:-translate-y-1 hover:duration-200">
-                View Resume 📄
-              </button>
-            </a>
+
+            <!-- Resume download button -->
+            <ResumeButton />
           </div>
         </div>
-        <div class="lp:w-1/2 flex flex-col gap-4 tb:gap-8">
+
+        <!-- Skills and technologies section -->
+        <div class="flex flex-col lp:w-1/2 gap-4 tb:gap-8">
+
+          <!-- Section title -->
           <h3 ref="skills_and_tech_title"
-            class="text-center lp:text-left font-bold text-xl lp:text-3xl tracking-tight translate-x-20 opacity-0 duration-700"
+            class="text-center lp:text-left font-bold text-xl tb:text-2xl lp:text-3xl tracking-tight opacity-0 translate-x-20 duration-700"
             :class="isViewed ? setSlideAnimationClasses('skills_and_tech_title', 600) : ''">
-            🧐 SKILLS & TECHNOLOGIES
+            SKILLS & TECHNOLOGIES 🧐
           </h3>
+
+          <!-- Skills section -->
           <div ref="skills_and_tech_desc"
-            class="flex flex-row flex-wrap gap-8 justify-center lp:justify-start translate-x-20 opacity-0 duration-700"
+            class="flex flex-row flex-wrap justify-center lp:justify-start gap-8 opacity-0 translate-x-20 duration-700"
             :class="isViewed ? setSlideAnimationClasses('skills_and_tech_desc', 700) : ''">
             <div v-for="(skill, index) in skillsList" :key="index"
               class="flex tb:hidden flex-row justify-center items-center gap-2">
@@ -55,35 +57,38 @@
             </div>
           </div>
         </div>
-        <a href="/resume_06072023.pdf" target="_blank"
-          class="block lp:hidden tb:mx-auto mt-5 lp:m-0 lp:mt-2 text-center lp:text-left w-full lp:w-max">
-          <button type="button"
-            class="group bg-gradient-to-r from-[#09203F] to-[#537895] dark:from-[#4568dc] dark:to-[#b06ab3] rounded-2xl w-full h-[48px] tb:h-[56px] lp:w-56 lp:h-[70px] bg-white text-xs tb:text-sm lp:text-lg text-white font-medium uppercase leading-normal tracking-wider duration-1000 translate-y-0 hover:-translate-y-1 hover:duration-200">
-            View Resume 📄
-          </button>
-        </a>
+
+        <!-- Mobile/Tablet resume download button -->
+        <ResumeButton :is-mobile="true" />
       </div>
     </template>
   </Section>
 </template>
 <script>
-import { skills } from '../constants';
-import { initFlowbite } from 'flowbite';
+import { about_descriptions, skills } from '../constants';
 import Section from "./reusable/Section.vue";
 import Icon from "./reusable/Icon.vue";
+import ResumeButton from "./reusable/ResumeButton.vue";
 
 export default {
   components: {
     Icon,
-    Section
+    Section,
+    ResumeButton
   },
   data() {
     return {
       isViewed: false,
       skillsList: skills,
+      descriptions: about_descriptions,
     }
   },
   watch: {
+    /**
+     * Watch changes on currentViewedSection
+     * @param {*} newValue 
+     * @param {*} oldValue 
+     */
     currentViewedSection(newValue, oldValue) {
       this.isViewed = newValue === 'about_section';
     }

@@ -1,3 +1,8 @@
+export const about_descriptions = [
+    'Hello stranger! 👋🏾 Welcome to my portfolio, where I showcase my diverse range of skills and experiences.',
+    'I am a web developer responsible for creating and implementing the visual and interactive elements of the internet.',
+    'I have always had a deep fascination for web development. Over the years, I have honed my craft and developed expertise in frontend frameworks and tools. Throughout my professional journey, I have consistently showcased my proficiency in accurately and skillfully transforming designs into functional code.',
+];
 export const skills = [
     {
         name: 'HTML',

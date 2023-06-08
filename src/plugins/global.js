@@ -50,6 +50,9 @@ export default {
         return 'pc';
       }
     },
+    app.config.globalProperties.$toggleClass = (element, ...classes) => {
+      classes.map(cl => element.classList.toggle(cl));
+    },
     app.config.globalProperties.$toggleDarkMode = () => {
       document.querySelector('html').classList.toggle('dark');
     }
