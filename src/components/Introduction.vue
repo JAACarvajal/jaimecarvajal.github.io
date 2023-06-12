@@ -4,25 +4,32 @@
     class="relative flex flex-col justify-center place-content-center h-screen mx-auto tb:w-11/12 lp:w-3/4 lp:mb-40 text-3xl">
 
     <!-- Center content -->
-    <div class="relative flex flex-col justify-between place-content-center gap-4 py-20 px-10">
+    <div class="relative flex flex-col tb:flex-row justify-between gap-4 py-20 px-10">
       <!-- Greeting -->
-      <h1 id="pre_introduction_title" ref="pre_introduction_title"
-        class="w-full text-center font-extrabold text-sm tb:text-xl lp:text-lg pc:text-2xl leading-snug tracking-[.04em] opacity-0 translate-x-20 duration-700"
-        :class="isViewed ? setSlideAnimationClasses('pre_introduction_title', 300) : ''">
-        <span
-          class="text-transparent bg-clip-text bg-gradient-to-r from-[#09203F] to-[#537895] dark:from-[#4568dc] dark:to-[#b06ab3]">
-          HEY <span class="text-white">🙋🏽</span>, MY NAME IS
-        </span>
-      </h1>
-      <!-- Name -->
-      <h1 id="introduction_title" ref="introduction_title"
-        class="w-full text-center font-extrabold text-5xl tb:text-7xl lp:text-[7rem] pc:text-[8rem] leading-snug tracking-[.04em] opacity-0 translate-x-20 duration-700"
-        :class="isViewed ? setSlideAnimationClasses('introduction_title', 500) : ''">
-        <span
-          class="text-transparent bg-clip-text bg-gradient-to-r from-[#09203F] to-[#537895] dark:from-[#4568dc] dark:to-[#b06ab3]">
-          JAIME CARVAJAL
-        </span>
-      </h1>
+      <div class="flex flex-col place-content-center gap-2 text-center tb:text-left">
+        <h1 id="pre_introduction_title" ref="pre_introduction_title"
+          class="w-full font-extrabold text-xs tb:text-base lp:text-xl pc:text-2xl leading-snug tracking-[.04em] opacity-0 translate-x-20 duration-700"
+          :class="isViewed ? setSlideAnimationClasses('pre_introduction_title', 300) : ''">
+          <span
+            class="text-transparent bg-clip-text bg-gradient-to-r from-[#09203F] to-[#537895] dark:from-[#4568dc] dark:to-[#b06ab3]">
+            HEY, MY NAME IS
+          </span>
+        </h1>
+        <!-- Name -->
+        <h1 id="introduction_title" ref="introduction_title"
+          class="w-full font-extrabold text-7xl tb:text-8xl lp:text-[7rem] pc:text-[8rem] tracking-[.04em] opacity-0 translate-x-20 duration-700"
+          :class="isViewed ? setSlideAnimationClasses('introduction_title', 500) : ''">
+          <span
+            class="text-transparent bg-clip-text bg-gradient-to-r from-[#09203F] to-[#537895] dark:from-[#4568dc] dark:to-[#b06ab3]">
+            JAIME CARVAJAL
+          </span>
+        </h1>
+      </div>
+      <div id="introduction_icon" ref="introduction_icon"
+        class="flex flex-col tb:flex-row items-center h-auto mt-28 tb:mt-16 opacity-0 translate-x-20 duration-700"
+        :class="isViewed ? setSlideAnimationClasses('introduction_icon', 700) : ''">
+        <p class="relative -top-10 text-[10rem] tb:text-[11rem] lp:text-[13rem] pc:text-[15rem]">👋🏼</p>
+      </div>
     </div>
 
     <!-- Bottom content -->

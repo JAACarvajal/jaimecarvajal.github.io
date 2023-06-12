@@ -17,7 +17,7 @@
           <h3 ref="get_to_know_title"
             class="text-center lp:text-left font-bold text-xl tb:text-2xl lp:text-3xl tracking-tight opacity-0 translate-x-20 duration-700"
             :class="isViewed ? setSlideAnimationClasses('get_to_know_title', 400) : ''">
-            GET TO KNOW ME 😎
+            GET TO KNOW ME 👦🏼
           </h3>
 
           <!-- Descriptions -->
@@ -40,20 +40,19 @@
           <h3 ref="skills_and_tech_title"
             class="text-center lp:text-left font-bold text-xl tb:text-2xl lp:text-3xl tracking-tight opacity-0 translate-x-20 duration-700"
             :class="isViewed ? setSlideAnimationClasses('skills_and_tech_title', 600) : ''">
-            SKILLS & TECHNOLOGIES 🧐
+            SKILLS & TECHNOLOGIES 💻
           </h3>
 
           <!-- Skills section -->
           <div ref="skills_and_tech_desc"
-            class="flex flex-row flex-wrap justify-center lp:justify-start gap-8 opacity-0 translate-x-20 duration-700"
+            class="flex flex-row flex-wrap justify-center lp:justify-start gap-4 text-xl opacity-0 translate-x-20 duration-700"
             :class="isViewed ? setSlideAnimationClasses('skills_and_tech_desc', 700) : ''">
             <div v-for="(skill, index) in skillsList" :key="index"
-              class="flex tb:hidden flex-row justify-center items-center gap-2">
-              <Icon :iconName="skill.icon_name" style="font-size: 2em;" />
-            </div>
-            <div v-for="(skill, index) in skillsList" :key="index"
-              class="hidden tb:flex flex-row justify-center items-center gap-2">
-              <Icon :iconName="skill.icon_name" style="font-size: 4em;" />
+              class="flex flex-row justify-center items-center gap-2">
+              <div
+                class="py-3 px-5 font-extrabold tracking-wider bg-transparent rounded-lg duration-1000 translate-y-0 hover:-translate-y-1 hover:duration-200"
+                :class="skill.color_class">
+                {{ skill.name }}</div>
             </div>
           </div>
         </div>
@@ -67,12 +66,10 @@
 <script>
 import { about_descriptions, skills } from '../constants';
 import Section from "./reusable/Section.vue";
-import Icon from "./reusable/Icon.vue";
 import ResumeButton from "./reusable/ResumeButton.vue";
 
 export default {
   components: {
-    Icon,
     Section,
     ResumeButton
   },

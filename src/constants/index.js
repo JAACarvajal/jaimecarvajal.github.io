@@ -1,36 +1,44 @@
 export const about_descriptions = [
-    'Hello stranger! 👋🏾 Welcome to my portfolio, where I showcase my diverse range of skills and experiences.',
+    'Hello stranger! 👋🏼 Welcome to my portfolio, where I showcase my diverse range of skills and experiences.',
     'I am a web developer responsible for creating and implementing the visual and interactive elements of the internet.',
     'I have always had a deep fascination for web development. Over the years, I have honed my craft and developed expertise in frontend frameworks and tools. Throughout my professional journey, I have consistently showcased my proficiency in accurately and skillfully transforming designs into functional code.',
 ];
 export const skills = [
     {
         name: 'HTML',
-        icon_name: 'fa-brands fa-html5' 
+        color_class: 'bg-[#dd4b25] text-white' 
     },
     {
         name: 'CSS',
-        icon_name: 'fa-brands fa-css3' 
+        color_class: 'bg-[#254bdd] text-white' 
     },
     {
         name: 'JAVASCRIPT',
-        icon_name: 'fa-brands fa-js' 
+        color_class: 'bg-[#30312e] text-[#e8d44d]' 
     },
     {
         name: 'VUE',
-        icon_name: 'fa-brands fa-vuejs' 
+        color_class: 'bg-[#32475b] text-[#3fb27f]' 
     },
     {
         name: 'REACT',
-        icon_name: 'fa-brands fa-react' 
+        color_class: 'bg-[#212121] text-[#5ed3f3]' 
+    },
+    {
+        name: 'TAILWINDCSS',
+        color_class: 'bg-[#38bdf8] text-white' 
+    },
+    {
+        name: 'TYPESCRIPT',
+        color_class: 'bg-[#2f74c0] text-white' 
     },
     {
         name: 'PHP',
-        icon_name: 'fa-brands fa-php' 
+        color_class: 'bg-[#7377ad] text-black' 
     },
     {
-        name: 'laravel',
-        icon_name: 'fa-brands fa-laravel' 
+        name: 'LARAVEL',
+        color_class: 'bg-[#f72a1d] text-white' 
     },
 ];
 
