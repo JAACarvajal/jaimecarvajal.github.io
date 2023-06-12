@@ -50,7 +50,7 @@
             <div v-for="(skill, index) in skillsList" :key="index"
               class="flex flex-row justify-center items-center gap-2">
               <div
-                class="py-3 px-5 font-extrabold tracking-wider bg-transparent rounded-lg duration-1000 translate-y-0 hover:-translate-y-1 hover:duration-200"
+                class="py-3 px-5 font-extrabold tracking-wider rounded-lg duration-1000 translate-y-0 hover:-translate-y-1 hover:duration-200"
                 :class="skill.color_class">
                 {{ skill.name }}</div>
             </div>
