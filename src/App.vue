@@ -17,6 +17,7 @@ import Introduction from "./components/Introduction.vue";
 import About from "./components/About.vue";
 import Projects from "./components/Projects.vue";
 import Footer from "./components/Footer.vue";
+import { useGlobalStore } from './stores/global';
 
 export default {
   components: {
@@ -26,6 +27,16 @@ export default {
     About,
     Projects,
     Footer,
+  },
+  data() {
+    return { globalStore: useGlobalStore() }
+  },
+  created() {
+    if (localStorage.dark_mode) {
+      localStorage.dark_mode = this.globalStore.isDarkMode;
+    } else {
+      localStorage.dark_mode = false;
+    }
   }
 }
 </script>

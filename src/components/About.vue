@@ -17,7 +17,7 @@
           <h3 ref="get_to_know_title"
             class="text-center lp:text-left font-bold text-xl tb:text-2xl lp:text-3xl tracking-tight opacity-0 translate-x-20 duration-700"
             :class="isViewed ? setSlideAnimationClasses('get_to_know_title', 400) : ''">
-            GET TO KNOW ME 👦🏼
+            GET TO KNOW ME
           </h3>
 
           <!-- Descriptions -->
@@ -40,7 +40,7 @@
           <h3 ref="skills_and_tech_title"
             class="text-center lp:text-left font-bold text-xl tb:text-2xl lp:text-3xl tracking-tight opacity-0 translate-x-20 duration-700"
             :class="isViewed ? setSlideAnimationClasses('skills_and_tech_title', 600) : ''">
-            SKILLS & TECHNOLOGIES 💻
+            SKILLS & TECHNOLOGIES
           </h3>
 
           <!-- Skills section -->

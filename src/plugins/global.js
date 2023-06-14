@@ -1,5 +1,8 @@
 export default {
   install(app, options) {
+    /**
+     * toggle static multiple classes
+     */
     app.config.globalProperties.$handleMultipleClasses = (elementId, classToAlter, method) => {
       const targetElement = document.getElementById(elementId);
 
@@ -54,7 +57,7 @@ export default {
       classes.map(cl => element.classList.toggle(cl));
     },
     app.config.globalProperties.$toggleDarkMode = () => {
-      document.querySelector('html').classList.toggle('dark');
+      document.documentElement.classList.toggle('dark');
     }
   }
 }

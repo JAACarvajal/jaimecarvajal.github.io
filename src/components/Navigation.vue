@@ -46,7 +46,7 @@
     </div>
 
     <!-- Mobile/tablet nav -->
-    <MobileNav @close-mobile-nav="closeMobileNav()" :isToggleDropdown="bIsToggleDropdown" />
+    <MobileNav @close-mobile-nav="toggleDropdown()" :isToggleDropdown="bIsToggleDropdown" />
   </nav>
 </template>
 <script>

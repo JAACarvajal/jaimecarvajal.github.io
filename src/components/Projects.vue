@@ -14,10 +14,12 @@
         </div>
       </div>
       <div ref="more_to_come_projects"
-        class="relative top-10 w-full min-h-max mt-20 translate-x-20 opacity-0 duration-500"
+        class="relative top-0 lp:top-10 w-full min-h-max mt-10 translate-x-20 opacity-0 duration-500"
         :class="isViewed ? setSlideAnimationClasses('more_to_come_projects', 900) : ''">
-        <p class="text-xl text-center">👌🏼 More <strong>personal projects</strong> and <strong>works</strong> coming
-          soon! 👌🏼</p>
+        <p class="text-base tb:text-lg text-center">More <strong>personal projects</strong> and
+          <strong>works</strong> coming
+          soon!
+        </p>
       </div>
     </template>
   </Section>

@@ -4,7 +4,7 @@
         class="relative flex flex-col justify-between items-center w-full p-10 px-20 tb:px-56 mt-5 tb:mt-0 lp:pt-0 gap-10 text-dark-gray dark:text-white">
         <!-- Scroll to top button -->
         <div class="w-full text-center tb:w-auto group">
-            <font-awesome-icon class="animate-bounce hover:cursor-pointer" icon="fa-solid fa-angle-up" size="2xl"
+            <font-awesome-icon class="hover:cursor-pointer" icon="fa-solid fa-angle-up" size="2xl"
                 @click.prevent="scrollToTopPage" />
         </div>
 

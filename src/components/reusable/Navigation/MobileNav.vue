@@ -13,12 +13,8 @@
 <script>
 import NavBarItem from "./NavBarItem.vue";
 export default {
-    components: {
-        NavBarItem
-    },
-    props: {
-        isToggleDropdown: Boolean
-    },
+    components: { NavBarItem },
+    props: { isToggleDropdown: Boolean },
     watch: {
         /**
          * Watch for changes in isToggleDropdown

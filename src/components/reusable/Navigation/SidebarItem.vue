@@ -4,7 +4,7 @@
         {{ item.title }}
     </a>
 
-    <a v-if="type === 'socials'" href="#" class="text-center text-sm duration-400">
+    <a v-if="type === 'socials'" :href="item.url" class="text-center text-sm duration-400" target="_blank">
         <font-awesome-icon :icon="item.icon_class" size="lg" />
     </a>
 </template>

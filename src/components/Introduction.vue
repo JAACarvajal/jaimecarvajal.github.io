@@ -4,9 +4,9 @@
     class="relative flex flex-col justify-center place-content-center h-screen mx-auto tb:w-11/12 lp:w-3/4 lp:mb-40 text-3xl">
 
     <!-- Center content -->
-    <div class="relative flex flex-col tb:flex-row justify-between gap-4 py-20 px-10">
+    <div class="relative flex flex-col lp:flex-row justify-between gap-4 py-20 px-10">
       <!-- Greeting -->
-      <div class="flex flex-col place-content-center gap-2 text-center tb:text-left">
+      <div class="flex flex-col place-content-center justify-center gap-2 text-center lp:text-left">
         <h1 id="pre_introduction_title" ref="pre_introduction_title"
           class="w-full font-extrabold text-xs tb:text-base lp:text-xl pc:text-2xl leading-snug tracking-[.04em] opacity-0 translate-x-20 duration-700"
           :class="isViewed ? setSlideAnimationClasses('pre_introduction_title', 300) : ''">
@@ -26,7 +26,7 @@
         </h1>
       </div>
       <div id="introduction_icon" ref="introduction_icon"
-        class="flex flex-col tb:flex-row items-center h-auto mt-28 tb:mt-16 opacity-0 translate-x-20 duration-700"
+        class="hidden lp:flex flex-col tb:flex-row items-center h-auto mt-28 tb:mt-16 opacity-0 translate-x-20 duration-700"
         :class="isViewed ? setSlideAnimationClasses('introduction_icon', 700) : ''">
         <p class="relative -top-10 text-[10rem] tb:text-[11rem] lp:text-[13rem] pc:text-[15rem]">👋🏼</p>
       </div>
@@ -46,8 +46,8 @@
       <!-- Go to about arrow -->
       <div ref="introduction_arrow" class="w-full tb:w-auto text-center opacity-0 translate-x-20 duration-700"
         :class="isViewed ? setSlideAnimationClasses('introduction_arrow', 900) : ''">
-        <font-awesome-icon class="-translate-x-1/2 translate-y-[80%] animate-bounce hover:cursor-pointer"
-          icon="fa-solid fa-angle-down" @click="scrollToSection($event, 'about_section')" />
+        <font-awesome-icon class="-translate-x-1/2 hover:cursor-pointer" icon="fa-solid fa-angle-down"
+          @click="scrollToSection($event, 'about_section')" />
       </div>
 
       <!-- Email text -->

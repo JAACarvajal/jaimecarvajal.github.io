@@ -22,6 +22,9 @@ export default {
         }
     },
     methods: {
+        /**
+         * Set scroll dicrection
+         */
         setScrollDirection() {
             // Get currenct scroll position
             const currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop;
@@ -58,6 +61,10 @@ export default {
                 });
             }
         },
+        /**
+         * Show element/s when scrolled down
+         * @returns 
+         */
         showElementsWhenNotOnTopPage() {
             for (const element of this.elementsToShowWhenNotOnTopPage) {
                 // If user scrolled
@@ -96,6 +103,9 @@ export default {
                 this.$toggleClasses('nav_logo', 'lp:h-24', 'lp:h-12');
             }
         },
+        /**
+         * Get current viewed section
+         */
         getCurrentViewedSection() {
             for (const element of this.sectionIds) {
                 if (this.checkIfElementIsOnViewPort(element.id)) {
@@ -104,6 +114,11 @@ export default {
                 }
             }
         },
+        /**
+         * Check if a section is within viewport
+         * @param {} elementId 
+         * @returns 
+         */
         checkIfElementIsOnViewPort(elementId) {
             const rect = document.getElementById(elementId).getBoundingClientRect();
             
@@ -113,6 +128,9 @@ export default {
                 rect.bottom <= (rect.height + (rect.height * .50)) // Set this higher
             );
         },
+        /**
+         * Scroll to top page
+         */
         scrollToTopPage() {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         },
